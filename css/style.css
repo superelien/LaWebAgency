@@ -6,3 +6,12 @@ body {
 .logocenter{
     width: 60%;
 }
+.modal-content{
+    background-color: #1E7E85;
+    color: white;
+}
+
+.modal-content a{
+    font-weight: bold;
+    color: #FAA61F ;
+}

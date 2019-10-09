@@ -1,5 +1,15 @@
 <html lang="fr">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142422987-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-142422987-2');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,12 +20,29 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfVvrwUAAAAAKPE7qxohsJySELSp5rEvv1wbLwM"></script>
+
+    <meta name="description" content="Créateur: Site web & Infographie | Creator: Website & Infographic">
+    <meta property="og:locale" content="fr_FR"/>
+    <meta property="og:type" content="services"/>
+    <meta property="og:title" content="La Web Agency Créateur : Site web & Infographie"/>
+    <meta property="og:image" content="asset/LA_WA_BO.png" />
+    <meta property="og:description" content="Créateur: Site web & Infographie | Creator: Website & Infographic"/>
+    <meta property="og:url" content="https://www.lawebagency.net"/>
+    <meta property="og:site_name" content="La Web Agency"/>
+    <meta name="twitter:card" content="La Web Agency"/>
+    <meta name="twitter:title" content="Créateur: Site web & Infographie | Creator: Website & Infographic"/>
+    <meta name=”twitter:image” content="asset/LA_WA_BO.png"  />
+
+    
+
     <title>La Web Agency</title>
 </head>
 <body>
     <header class="container">
             <div class="row">
-                    <div class="text-center col-lg-12">
+                    <div class="text-center col-lg-12 mt-5">
     
                         <h1>Agence Web</h1>
                         <h2>Création de sites & Infographies</h2>                    
@@ -27,7 +54,32 @@
             <div class=" text-center col-lg-12">
                      <img class="logocenter img-fluid" src="asset/LA_WA_BO.png" alt="logo La Web Agency">
                      <p>site en construction</p>
-                     <a href="mailto:aurelien@lawebagency.net">Contact par mail</a>
+
+                     <!-- Button trigger modal -->
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+                Contact
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">me contacter</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p>Vous pouvez me contacter par Mail : </p>
+                            <a href="mailto:aurelien@lawebagency.net">aurelien@lawebagency.net</a>
+                            <hr>
+                            <p>ou par téléphone</p>
+                            <a href="tel:0622072751"> <p>06.22.07.27.51</p></a>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-dismiss="modal">X</button>
+                    </div>
+                </div>
+                </div>
+            </div>         
             </div>
         </div>
     </main>
@@ -38,8 +90,25 @@
                     </div>
                 </div>
     </footer>
+    <script>
+        grecaptcha.ready(function() {
+        grecaptcha.execute('6LfVvrwUAAAAAKPE7qxohsJySELSp5rEvv1wbLwM', {action: 'homepage'}).then(function(token) {
+            "success": true|false,      // whether this request was a valid reCAPTCHA token for your site
+            "score": number             // the score for this request (0.0 - 1.0)
+            "action": string            // the action name for this request (important to verify)
+            "challenge_ts": timestamp,  // timestamp of the challenge load (ISO format yyyy-MM-dd'T'HH:mm:ssZZ)
+            "hostname": string,         // the hostname of the site where the reCAPTCHA was solved
+          });
+    });
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+            $('#myModal').on('shown.bs.modal', function () {
+                $('#myInput').trigger('focus')
+              });
+    </script>
+
 </body>
 </html>
