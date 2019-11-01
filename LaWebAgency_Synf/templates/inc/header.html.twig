@@ -1,0 +1,50 @@
+<div class="row">
+
+<header >
+        <div >
+            <div >   
+                <nav class="top-nav">
+                    <div class="menu-wrapper">
+                        <ul class="menu">
+                            <li>
+                                <a href="{{ path('index') }}">home</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('aboutme') }}">about me</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('works') }}">projects</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('contact') }}">contact</a>
+                            </li>
+                            <li>
+                                <button class="menu-close" aria-label="close menu">✕</button>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <div class="fixed-menu">
+                        <a href={{ path('index') }}> <img class="logocenter img-fluid" src="{{asset('asset/LA_WA_BO.png')}}" alt="logo La Web Agency"></a>
+                       
+                        <button class="menu-open" aria-label="open menu">☰</button>
+                        <ul class="socials">
+                            <li>
+                                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+                        Contact
+                    </button>
+                            </li>
+                            <!-- <li>
+                                <a href="">twitter</a>
+                            </li>
+                            <li>
+                                <a href="">instagram</a>
+                            </li> -->
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+</div>

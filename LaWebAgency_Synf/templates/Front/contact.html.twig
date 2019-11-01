@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+    <div id="contact">
+        <div class="">
+            <p>Vous pouvez me contacter par Mail : </p>
+            <a href="mailto:aurelien@lawebagency.net">aurelien@lawebagency.net</a>
+            <p>ou par téléphone</p>
+            <a href="tel:0622072751">
+                <p>06.22.07.27.51</p>
+            </a>
+            <form action="/ma-page-de-traitement" method="post">
+                <div>
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="user_name">
+                </div>
+                <div>
+                    <label for="mail">e-mail :</label>
+                    <input type="email" id="mail" name="user_mail">
+                </div>
+                <div>
+                    <label for="msg">Message :</label>
+                    <textarea id="msg" name="user_message"></textarea>
+                </div>
+                <button>envoyer</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
