@@ -6,6 +6,7 @@ body {
     background-color: black;
     color: gray;
     font-family: 'Staatliches', cursive;
+    width: 100vw;
 }
 .logocenter{
     width: 60%;
@@ -52,7 +53,6 @@ body {
 
 .top-banner {
     display: flex;
-    width: calc(100% - 200px);
     height: 100vh;
     transform: translateX(150px);
     background: url(../asset/octopus_2560x1600.jpg) no-repeat center / cover;
