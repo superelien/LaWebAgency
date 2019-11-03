@@ -209,17 +209,27 @@ footer{
     top: 0;
     height: 250px;
     width: 200px;
-    background: #FAA61FCC; 
+    background: #FAA61FCC;
     box-shadow: 0 0 10px black;
+   
+    
   }
   
   .two {
     left: 20%;
     top: 20%;
+    background: #FAA61FCC; 
+
   }
   .three {
     left: -50%;
     top: -15%;
+    background: #FAA61FCC; 
+   
+  }
+  .four{
+    color: white;
+    background: rgba(0, 0, 0, .7);
   }
   .logocenter{
     width: 70px;

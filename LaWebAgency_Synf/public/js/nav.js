@@ -17,7 +17,7 @@ function toggleMenu() {
 
 toggleMenu();
 
-// parallax
+// parallax https://greensock.com/get-started
 var timeout;
 $('#container').mousemove(function(e){
   if(timeout) clearTimeout(timeout);
@@ -29,7 +29,8 @@ function callParallax(e){
   parallaxIt(e, '.slide.one', -100);
   parallaxIt(e, '.slide.two', -70);
   parallaxIt(e, '.slide.three', -50);
-  parallaxIt(e, 'img', -30);
+  parallaxIt(e, '.four', 150);
+  parallaxIt(e, 'img', 30);
 }
 
 function parallaxIt(e, target, movement){
