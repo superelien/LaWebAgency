@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Erreur{% endblock %}
+
+{% block body %}
+    <section class="top-banner row">
+     <div class="top-banner-overlay titlemobil col-lg-12">
+                    <h1>Erreur 404 !!!</h1>
+					Vous étes perdu ??
+					Retour à l'accueil :<a href="{{ path('index') }}">home</a>
+					Me contacter : <a href="{{ path('contact') }}">contact</a>
+                </div>
+        <div id="container">
+             <div class="slide one">
+                <div class="top-banner-overlay slide four">
+                    <section>
+                        <h1>Erreur 404 !!!</h1>
+
+                    </section>
+                </div>
+             </div>
+             <div class="slide two">
+             <div class="top-banner-overlay slide four">
+                    <section>                                         
+						Retour à l'accueil :<a href="{{ path('index') }}"> home</a>
+                        Me contacter : <a href="{{ path('contact') }}"> contact</a>
+                    </section>
+                </div>
+             
+            </div>
+            <div class="slide three">
+            <div class="top-banner-overlay slide four">
+                    <section>
+                    Vous étes perdu ??
+                        
+                    </section>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+{% endblock %}
+{% block javascripts %}<script src="../js/parallax.js" ></script>{% endblock %}

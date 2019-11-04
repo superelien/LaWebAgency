@@ -73,4 +73,8 @@ class FrontController extends AbstractController
                        'our_form' => $forms->createView(),
                    ]);
     }
+    public function mentions()
+    {
+        return $this->render('Front/legals.html.twig');
+    }
 }

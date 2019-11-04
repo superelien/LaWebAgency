@@ -198,12 +198,13 @@ footer{
     font-weight: 500;
     font-size: 0.9rem;
     letter-spacing: 0.05rem;
-    color: lightgray;
+    color: gray;
     text-transform: uppercase;
   }
   #myCV h3{
     font-size: 1rem;
     font-weight: 800;
+    color: white;
   }
   #project {
     margin-left: 135px;
