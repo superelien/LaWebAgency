@@ -20,6 +20,10 @@ class FrontController extends AbstractController
     {
         return $this->render('Front/aboutme.html.twig');
     }
+    public function aboutmeCV()
+    {
+        return $this->render('Front/aboutmeCV.html.twig');
+    }
     public function works()
     {
         return $this->render('Front/works.html.twig');

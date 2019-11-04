@@ -6,6 +6,10 @@ aboutme:
     path: /aboutme
     controller: App\Controller\FrontController::aboutme
 
+aboutmeCV:
+    path: /aboutmeCV
+    controller: App\Controller\FrontController::aboutmeCV
+
 works:
     path: /works
     controller: App\Controller\FrontController::works

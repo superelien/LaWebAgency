@@ -2,159 +2,66 @@
 
 {% block title %}à propos{% endblock %}
 {% block body %}
-<div id="cvPage" class="row">
-    <div class=" text-left col-lg-4">
-        <!-- <img class="logocenter img-fluid" src="asset/LA_WA_BO.png" alt="logo La Web Agency"> -->
-        <div id="aboutme" >
-            <h1>me my sef and I</h1>
-            <img class="img-fluid" src="asset/MoiCV2.jpg" alt="phot aurelien latieule">
-            <p>tel des mentos dans une bouteille de coca light  <br> j'allie mon oeil de linx et mes capacités techniques, <br> pour tout faire péter !!</p>
-            <a href="https://www.la-projets.yo.fr/" target="_blank">Mon site durant mes études</a>
-            <ul>
-                <li>Né le 27/09/1979 à Carcassonne</li>
-                <li>Permis: B (Voiture)</li>
-                <li>11170 Pezens, France</li>
-                <li> 06.22.07.27.51  </li>
-                <li><a class="adresse" href="mailto:aurlat.simplon@gmail.com" >E-mail</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class=" text-left col-lg-8">
-        <!-- <img class="logocenter img-fluid" src="asset/LA_WA_BO.png" alt="logo La Web Agency"> -->
-        <div id="myCV" class="container">
-            <div class="row CV" >
-                <div class="col-12 text-center">
-                    <h1>Aurélien Latieule</h1>
-                    <h3>curriculum vitae</h3>
-                    <div class="pol">
-                        <h1>Développeur Web / Infographiste</h1>
-                        <p>Voici quelques traits de mon caractère… <br />
-
-                                LA POLYVALENCE est une de mes principales qualités : j’aime beaucoup mener des projets variés seul ou en équipe.<br />
-                                J’aime me former en continu aux nouvelles technologies du web ou aux nouveaux outils afin de garder cette polyvalence.<br />
-                                Je suis minutieux, attentif toujours en quête d'éfficacité et je fais preuve d'un investitement total dans mes projets.
-                        </p>
+    <section class="top-banner row">
+     <div class="top-banner-overlay titlemobil col-lg-12">
+                    <h1>Création Web</h1>
+                    <h2>Sites & Infographies</h2>
+                </div>
+        <div id="container">
+             <div class="slide one">
+                <div class="top-banner-overlay slide four">
+                    <img class="img-fluid logoAbout" src="{{asset('asset/LA_WA_BO.png')}}" alt="logo La web agency">
+                    <p>Au service de votre vision /
+                     Création, essentiel, communication, diffusion, récréation, action</p>
+                </div>
+             </div>
+             <div class="slide two">
+                <div class="top-banner-overlay slide four">
+                    <p>Re naitre dans la même peau, avec un esprit neuf; 
+                     Être un semblabe, mais atypique; 
+                     Ex aequo sur des lignes différentes;</p>
                     </div>
-                </div>
-            </div>    
-                                                          <!-- presentation start -->
-                                                       <!-- competences start -->
-            <div class="row CV">
-                <div class="clas-12">
-                    <h2>Compétences</h2>
-                </div>
+             
             </div>
-            <div class="row CV">    
-                <div class="col-4 text-right">
-                    <h3>Infographie</h3>
-                    <p>Adobe Illustrator&nbsp; <progress name="progress-bar" value="85" max="100" </progress> </p>
-                    <p>Adobe Photoshop  <progress name="progress-bar" value="75" max="100" </progress> </p>
-                    <p>Adobe Indesing   &nbsp; <progress name="progress-bar" value="30" max="100" </progress> </p>
-                    <p>Gimp  <progress name="progress-bar" value="75" max="100" </progress> </p>
-                    <p>InkScape  <progress name="progress-bar" value="75" max="100" </progress> </p>
-                </div>
-                <div class="col-4 text-right">    
-                    <h3>Développeur</h3>
-                    <p>HTML 5&nbsp; <progress name="progress-bar" value="80" max="100" </progress> </p>
-                    <p>CSS 3&nbsp; <progress name="progress-bar" value="80" max="100" </progress> </p>
-                    <p>PHP&nbsp;<progress name="progress-bar" value="65" max="100" </progress> </p>
-                    <p>Symfony 4&nbsp;<progress name="progress-bar" value="65" max="100" </progress> </p>
-                    <p>JavaScript <progress  name="progress-bar" value="45" max="100" </progress> </p>
-                    <p>React JS <progress name="progress-bar" value="25" max="100" </progress> </p>
-                </div>
-                <div class="col-4 text-right">  
-                    <h3>Langue</h3>
-                    <h4>Anglais</h4>
-                    <p>Oral&nbsp;<progress name="progress-bar" value="50" max="100" </progress> </p>
-                    <p>Ecrit&nbsp; <progress name="progress-bar" value="70" max="100" </progress> </p>
-                </div>
-
-           <!-- competences end -->
-           <!-- formations start -->
-                <div class="formartion col-12">
-                    <h2>Formation</h2>
-
-                    
-                    <i><h3>Titre pro Développeur web / application web</h3></i> <p>Simplon Occitanie, Carcassonne Septembre 2018 - Septembre 2019</p>
-                    
-                    
-                    <i><h3>CAP, Agent d’exécution graphiste décorateur</h3></i>  <p>CFA Pierre Paul Riquet, Toulouse 31  Octobre 1998 - juillet 2000</p>
-                    
-                    
-                    <i><h3>BEP, Bois et matériaux associés</h3></i> <p> Lycée François Andréossy, Castelnaudary 11 Septembre 1995 - Juin  1998</p>
-                    
-                </div>
-                                                   <!-- Formations end -->
-                                                  <!-- experiences start -->
-                <div class="experiences col-12">
-                    <h2>Expériences</h2>
-                    
-                     <i><h3>Développeur web</h3> Stage Event Orizon</i><p>Développement sous symfony 4, PHP, mise en place de CRUD, Back-office</p><p>Mai 2019 - Aout 2019 Carcassonne 11</p>
-                    <BR>
-                    <p> 
-                     <i><h3>Technicien machine</h3> C.D.I. Global Signa</i><p>Accueil clientèle, infographie, prise de mesures, conception, fabrication, suivi des stocks, prépresse, pose Enseignes, panneaux, banderoles, véhicules, cartes de visite, flyers, etc...</p><p>Novembre 2017 - Avril 2018   Carcassonne 11</p>
-                    <BR>
-                     
-                     <i><h3>Graphiste</h3> C.D.I. Stores et Enseignes</i><p>Accueil clientèle, infographie, prise de mesures, conception, fabrication, suivi des stocks, prépresse, pose Enseignes, panneaux, banderoles, véhicules, cartes de visite, flyers, etc...</p><p>Mars 2007 - Novembre 2017  Carcassonne 11</p>
-                    <BR>
-                     
-                     <i><h3>Peintre en lettres</h3> C.D.I. Ramon enseignes et peinture</i><p>Accueil clientèle, infographie, prise de mesures, conception, fabrication, suivi des stocks, prépresse, pose Enseignes, panneaux, banderoles, véhicules, cartes de visite, flyers, etc...</p><p>Septembre 2000 - Mars 2007   Carcassonne 11</p>
-                    <BR>
-                     
-                     <i><h3>Peintre en lettres</h3> Apprentissage Ramon enseignes</i><p>Fabrication, pose, infographie</p><p>Octobre 1998 - juillet 2000 Carcassonne 11</p>
-                    
-                </div>
-                                                  <!-- experiences end -->
-                                                  <!-- autre experiences start -->
-                <div class="autreexperiences col-6">
-                    <h2>Autre Expérience</h2>
-                    <i>Menuiserie bois</i>   Carcassonne 11<br />
-                    <i>Fabriqué ma propre maison</i>   Carcassonne 11<br />
-                    </p>
-                </div>
-                                                  <!--autre experiences end -->
-                                                   <!-- centres interet start -->
-                <div class="ci col-6">
-                    <h2>Centres d’intérêt</h2>
-                    <p>Infographie, Conception d'affiches, de pochettes CD et DVD.<BR/>
-                        Cinéma, Musique, jeux vidéo, Cuisine, Culture, ...
-                    </p>
-                </div>
-                                                      <!-- centres interet end -->
-                                                     <!-- Contacts section start -->
-                
+            <div class="slide three">
+                <div class="top-banner-overlay slide four">
+                <h1>LA Web Agency</h1>
+                <p>juste de moi à vous</p>
             </div>
-            <div class="row" id="contacts">
-                <div class="section col-12 text-center" >
-                    <button><a href="{{asset('asset/ALATIEULE_CV.png')}}" target="_blank">
-                            CV version téléchargeable
-                        </a></button>
+            </div>
+        </div>
+    </section>
 
-                    <h2>Suivez-moi</h2>
 
-                    <div class="suivez">
+    <div class="row" id="contacts">
+        <div class="section col-12 text-center" >
+            <button>
+                <a href="{{path('aboutmeCV')}}">
+                            CV en ligne
+                </a>
+            </button>
+            <h2>Suivez-moi</h2>
+            <div class="suivez">
                         <a href="https://www.sololearn.com/Profile/9597984#_=_" target="_blank">
-                            <img alt="SoloLearn" height="70px auto" src="https://www.sololearn.com/Uploads/icons/sololearn.png" />
+                            <img alt="SoloLearn" height="30px auto" src="https://www.sololearn.com/Uploads/icons/sololearn.png" />
                         </a>
                         <a href="https://www.facebook.com/aurelien.latieulepro.1" target="_blank">
-                            <img alt="Facebook" height="70px auto" src="{{asset('asset/FB-rond.svg')}}"/>
+                            <img alt="Facebook" height="30px auto" src="{{asset('asset/FB-rond.svg')}}"/>
                         </a>
                         <a href="https://twitter.com/superelien" target="_blank">
-                            <img alt="Twitter" height="70px auto" src="{{asset('asset/Twitter.svg')}}"/>
+                            <img alt="Twitter" height="30px auto" src="{{asset('asset/Twitter.svg')}}"/>
                         </a>
                         <a href="https://www.linkedin.com/in/aur%C3%A9lien-latieule-398b8b98/" target="_blank">
-                            <img alt="linkedin" height="70px auto" src="{{asset('asset/linkedin-rond.svg')}}"/>
+                            <img alt="linkedin" height="30px auto" src="{{asset('asset/linkedin-rond.svg')}}"/>
                         </a>
                         <a href="https://github.com/superelien" target="_blank">
-                            <img alt="linkedin" height="70px auto" src="{{asset('asset/GitHub-Mark.svg')}}"/>
+                            <img alt="linkedin" height="30px auto" src="{{asset('asset/GitHub-Mark.svg')}}"/>
                         </a>
-                    </div>
-
-                    <a href="https://lesjoiesducode.fr/" onclick="window.open('https://lesjoiesducode.fr/', 'exemple', 'height=600, width=800, top=90, left=350, toolbar=no, menubar=no, location=yes, resizable=yes, scrollbars=yes, status=no'); return false;">Juste pour le fun
-                    </a>
-                </div>
             </div>
+            <a href="https://lesjoiesducode.fr/" onclick="window.open('https://lesjoiesducode.fr/', 'exemple', 'height=600, width=800, top=90, left=350, toolbar=no, menubar=no, location=yes, resizable=yes, scrollbars=yes, status=no'); return false;">Juste pour le fun
+            </a>
         </div>
     </div>
 </div>
 {% endblock %}
+{% block javascripts %}<script src="../js/parallax.js" ></script>{% endblock %}

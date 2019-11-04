@@ -13,7 +13,7 @@ header{
 }
 
 footer{
-  botton: 100vh;
+  bottom: 100vh;
 }
 
 .modal-content{
@@ -59,18 +59,11 @@ footer{
       left: 2%;
       top: 2%;
       text-align: left;
-  
   }
-
   #cvPage h1, #cvPage h2{
     color: #FAA61F;
 
   }
-  #aboutme h1, #aboutme h2{
-    color: gray;
-
-  }
-
   .mentions{
     font-size: 0.8rem;
   }
@@ -190,7 +183,8 @@ footer{
 
   #aboutme {
     padding: 20px;
-    background-color:#FAA61F;
+    background-color:#FAA61F55;
+    color: teal;
     margin-left: 135px;
   }
   #myCV{
@@ -207,16 +201,22 @@ footer{
     color: white;
   }
   #project {
-    margin-left: 135px;
     padding: 20px;
     background-color: darkcyan;
     color: darkseagreen;
   }
-
-  
+  .CartCarding{
+    margin-left: 135px;
+  }
+  .carding{
+    background-color: #ffffffcc;
+    color: teal;
+  }
+  .carding img{
+    margin-top: 12px;
+  }
 
   #contact {
-    margin-left: 135px;
     padding: 20px;
     background-color: goldenrod;
   }
@@ -264,11 +264,16 @@ footer{
   }
   .logocenter{
     width: 70px;
-    filter: drop-shadow(0 0 5px black);
+    filter: drop-shadow(0 0 2px black);
     position: absolute;
     top: 0;
     left: 0;
     margin: 5%;
+}
+.logoAbout{
+  width: 25%;
+  filter: drop-shadow(1 1 2px black);
+
 }
 .titlemobil{
   display: none;

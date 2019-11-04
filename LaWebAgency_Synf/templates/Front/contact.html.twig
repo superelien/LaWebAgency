@@ -3,8 +3,8 @@
 {% block title %}Contact{% endblock %}
 
 {% block body %}
-    <div id="contact">
-        <div class="">
+    <div id="contact" class="row top-banner">
+        <div class="col-5 CartCarding" >
         <h1>Contact</h1>
         <p>Envoyez moi votre demande</p>
             {# <p>Vous pouvez me contacter par Mail : </p>
@@ -15,8 +15,8 @@
             </a> #}
                 <div>
                 {{ form_start(our_form) }}
-                {{ form_widget(our_form) }}
                 <button type="submit"  >Envoyer</button>
+                {{ form_widget(our_form) }}
                 {{ form_end(our_form) }}
                 </div>
 
