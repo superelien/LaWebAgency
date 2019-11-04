@@ -15,19 +15,21 @@
     </script>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="shortcut icon" href="{{asset('asset/LA_WA_BO-min.png')}}"  type="image/x-icon">
     <link rel="icon" href="{{asset('asset/LA_WA_BO-min.png')}}" type="image/x-icon">
 
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+
     <link href="https://fonts.googleapis.com/css?family=McLaren|Staatliches&display=swap" rel="stylesheet">
 
-    <script src="https://www.google.com/recaptcha/api.js?render=6LfVvrwUAAAAAKPE7qxohsJySELSp5rEvv1wbLwM"></script>
+    {# <script src="https://www.google.com/recaptcha/api.js?render=6LfVvrwUAAAAAKPE7qxohsJySELSp5rEvv1wbLwM"></script> #}
+   
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <meta name="description" content="Créateur: Site web & Infographie | Creator: Website & Infographic">
     <meta property="og:locale" content="fr_FR" />
@@ -44,33 +46,85 @@
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+                {# read and display just one flash message type #}
+        {% for message in app.flashes('notice') %}
+        <div class="flash-notice" role="alert">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {# read and display several types of flash messages #}
+        {% for label, messages in app.flashes(['success', 'warning']) %}
+        {% for message in messages %}
+        <div class="flash-{{ label }} alert-dismissible ml-5 p-3 fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %}
+        {% endfor %}
+        {# read and display all flash messages #}
+        {% for label, messages in app.flashes %}
+        {% for message in messages %}
+        <div class="flash-{{ label }} alert-dismissible ml-5 p-3 fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            
+        </div>
+        {% endfor %}
+        {% endfor %}
+
         <div class="container-fluid">
             {% include 'inc/header.html.twig' %}
             {% block body %}{% endblock %}
 
             {% include 'inc/footer.html.twig' %}
+
             {% block javascripts %}{% endblock %}
         </div>
-        <script>
-        grecaptcha.ready(function () {
-            grecaptcha.execute('6LfVvrwUAAAAAKPE7qxohsJySELSp5rEvv1wbLwM', {
+        {# <script>
+            grecaptcha.ready(function () {
+               grecaptcha.execute('6LfVvrwUAAAAAKPE7qxohsJySELSp5rEvv1wbLwM', {
                 action: 'homepage'
-            }).then(function (token) {
+             }).then(function (token) {
                 "success": true |  false // whether this request was a valid reCAPTCHA token for your site
 
+                });
             });
-        });
-    </script>
-    <script src="js/jquery.js" ></script>
-    <script src="js/nav.js" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script>
-        $('#myModal').on('shown.bs.modal', function () {
-            $('#myInput').trigger('focus')
-        });
-    </script>
+        </script> #}
+        <script src="js/jquery.js" ></script>
+        <script src="js/nav.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script>
+            $(".alert-dismissible").alert('close')
+        
+            $('#myModal').on('shown.bs.modal', function () {
+                $('#myInput').trigger('focus')
+            });
+        </script>
+        <script>
+            $(function () {
+               
+                // This will hide the container surely when you click.
+                $("alert-dismissible").click(function () {
+                    $("close").hide().css("display", "none");
+                });
+              
+            });
+        </script>
+        <!-- closer flache message -->
+        {# <script>
+            window.addEventListener('load', function () {
+            /***flash bag effect ***/
+                $(".alert-dismissible").animate({top: '0px'}).delay(2500).fadeOut();
+                
+            });
+        </script> #}
+    
     </body>
 </html>

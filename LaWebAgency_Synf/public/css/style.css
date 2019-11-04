@@ -53,6 +53,23 @@ footer{
     font-family: 'McLaren', cursive;
     cursor: pointer;
   }
+  
+  #aboutme {
+      position: sticky;
+      left: 2%;
+      top: 2%;
+      text-align: left;
+  
+  }
+
+  #cvPage h1, #cvPage h2{
+    color: #FAA61F;
+
+  }
+  #aboutme h1, #aboutme h2{
+    color: gray;
+
+  }
 
   .mentions{
     font-size: 0.8rem;
@@ -64,7 +81,6 @@ footer{
 .top-banner {
     display: flex;
     height: 100vh;
-    transform: translateX(135px);
     background: url(https://picsum.photos/1920/1080?random=) no-repeat center / cover;
 /*    background: url(../asset/octopus_2560x1600.jpg) no-repeat center / cover;
  */ }
@@ -144,7 +160,6 @@ footer{
 
   .top-nav .menu{
     margin-top: 100%;
-    z-index: 1005;
   }
   
   
@@ -178,12 +193,26 @@ footer{
     background-color:#FAA61F;
     margin-left: 135px;
   }
+  #myCV{
+    font-family: 'ubuntu', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    color: lightgray;
+    text-transform: uppercase;
+  }
+  #myCV h3{
+    font-size: 1rem;
+    font-weight: 800;
+  }
   #project {
     margin-left: 135px;
     padding: 20px;
     background-color: darkcyan;
     color: darkseagreen;
   }
+
+  
 
   #contact {
     margin-left: 135px;
@@ -205,31 +234,32 @@ footer{
   .slide{
     display: block;
     position: relative;
-    left: 0;
+    left: 15%;
     top: 0;
     height: 250px;
     width: 200px;
     background: #FAA61FCC;
     box-shadow: 0 0 10px black;
-   
-    
   }
   
   .two {
-    left: 20%;
+    left: 30%;
     top: 20%;
     background: #FAA61FCC; 
 
   }
   .three {
-    left: -50%;
-    top: -15%;
+    left: -35%;
+    top: -20%;
     background: #FAA61FCC; 
    
   }
   .four{
     color: white;
     background: rgba(0, 0, 0, .7);
+    height: 150px;
+    width: 300px;
+    top: 15%;
   }
   .logocenter{
     width: 70px;
@@ -237,24 +267,50 @@ footer{
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 3002;
     margin: 5%;
 }
 .titlemobil{
   display: none;
 }
 
+/* flash messages */
+.alert-dismissible{
+  text-align: center;
+  height: 48px;
+}
+.alert-dismissible button{
+  color: green;
+}
+
+
 @media (max-width: 1230px) {
   .three {
     display: none;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
+  #myCV {
+    margin-left: 20%;
+  }
   h1 {
-    font-size:1.3rem;
+    font-size:2rem;
   }
   h2 {
-    font-size:1.0rem;
+    font-size:1.4rem;
+  }
+}
+@media (max-width: 680px) {
+  .CV {
+    display: none;
+  }
+  
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size:1.8rem;
+  }
+  h2 {
+    font-size:1.20rem;
   }
   .two, .one, #container {
     display: none;
