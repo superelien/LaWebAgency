@@ -220,6 +220,11 @@ footer{
     padding: 20px;
     background-color: goldenrod;
   }
+  .btnEnv{
+    background-color: goldenrod;
+    padding: 1%;
+    color:white;
+  }
    /*  parallaxe */
 
    #container{
