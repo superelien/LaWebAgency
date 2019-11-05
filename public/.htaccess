@@ -1,0 +1,14 @@
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://lawebagency.net/$1 [R,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule .* index.php
+
+#RewriteRule (.*) index.php/$1 [L]
+
+#AddType application/octet-stream mp4 mp3 avi
+#php_flag display_errors on  #error 500
+#attention one and one ajouter un /
