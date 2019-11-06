@@ -3,71 +3,67 @@
 {% block title %}à propos{% endblock %}
 {% block body %}
     <section class="top-banner row">
-     <div class="top-banner-overlay titlemobil col-lg-12">
-        <h1>LA Web Agency</h1>
-                <p>juste de moi à vous</p>
-                    <img class="img-fluid logoAbout" src="{{asset('asset/LA_WA_BO.png')}}" alt="logo La web agency">
-                    <p>Au service de votre vision /
-                     Création, essentiel, communication, diffusion, récréation, action</p>
-                     <p>Re naitre dans la même peau, avec un esprit neuf; 
-                     Être un semblabe, mais atypique; 
-                     Ex aequo sur des lignes différentes;</p>
-                </div>
+        <div class="top-banner-overlay titlemobil col-lg-12">
+            <h1>LA Web Agency</h1>
+            <p>juste de vous à moi</p>
+            <img class="img-fluid logoAbout" src="{{asset('asset/LA_WA_BO.png')}}" alt="logo La web agency">
+            <p>Au service de votre vision /
+                Création, essentiel, communication, diffusion, récréation, action
+            </p>
+            <p>Re naitre dans la même peau, avec un esprit neuf; 
+                Être un semblabe, mais atypique; 
+                Ex aequo sur des lignes différentes;
+            </p>
+        </div>
         <div id="container">
-             <div class="slide one">
+            <div class="slide one">
                 <div class="top-banner-overlay slide four">
                     <img class="img-fluid logoAbout" src="{{asset('asset/LA_WA_BO.png')}}" alt="logo La web agency">
                     <p>Au service de votre vision /
-                     Création, essentiel, communication, diffusion, récréation, action</p>
+                        Création, essentiel, communication, diffusion, récréation, action
+                    </p>
                 </div>
-             </div>
-             <div class="slide two">
+            </div>
+            <div class="slide two">
                 <div class="top-banner-overlay slide four">
                     <p>Re naitre dans la même peau, avec un esprit neuf; 
-                     Être un semblabe, mais atypique; 
-                     Ex aequo sur des lignes différentes;</p>
-                    </div>
-             
+                        Être un semblabe, mais atypique; 
+                        Ex aequo sur des lignes différentes
+                    </p>
+                </div>
             </div>
             <div class="slide three">
                 <div class="top-banner-overlay slide four">
-                <h1>LA Web Agency</h1>
-                <p>juste de moi à vous</p>
-            </div>
+                    <h1>LA Web Agency</h1>
+                    <p>juste de vous à moi</p>
+                </div>
             </div>
         </div>
     </section>
-
-
     <div class="row" id="contacts">
         <div class="section col-12 text-center" >
-            <button>
-                <a href="{{path('aboutmeCV')}}">
-                            CV en ligne
-                </a>
-            </button>
+            <a href="{{path('aboutmeCV')}}">CV en ligne</a>
             <h2>Suivez-moi</h2>
-            <div class="suivez">
-                        <a href="https://www.sololearn.com/Profile/9597984#_=_" target="_blank">
-                            <img alt="SoloLearn" height="30px auto" src="https://www.sololearn.com/Uploads/icons/sololearn.png" />
-                        </a>
-                        <a href="https://www.facebook.com/aurelien.latieulepro.1" target="_blank">
-                            <img alt="Facebook" height="30px auto" src="{{asset('asset/FB-rond.svg')}}"/>
-                        </a>
-                        <a href="https://twitter.com/superelien" target="_blank">
-                            <img alt="Twitter" height="30px auto" src="{{asset('asset/Twitter.svg')}}"/>
-                        </a>
-                        <a href="https://www.linkedin.com/in/aur%C3%A9lien-latieule-398b8b98/" target="_blank">
-                            <img alt="linkedin" height="30px auto" src="{{asset('asset/linkedin-rond.svg')}}"/>
-                        </a>
-                        <a href="https://github.com/superelien" target="_blank">
-                            <img alt="linkedin" height="30px auto" src="{{asset('asset/GitHub-Mark.svg')}}"/>
-                        </a>
+            <div class="followMe">
+                <a href="https://www.sololearn.com/Profile/9597984#_=_" target="_blank">
+                    <img alt="SoloLearn"  src="https://www.sololearn.com/Uploads/icons/sololearn.png" />
+                </a>
+                <a href="https://www.facebook.com/aurelien.latieulepro.1" target="_blank">
+                    <img alt="Facebook"  src="{{asset('asset/FB-rond.svg')}}"/>
+                </a>
+                <a href="https://twitter.com/superelien" target="_blank">
+                    <img alt="Twitter"  src="{{asset('asset/Twitter.svg')}}"/>
+                </a>
+                <a href="https://www.linkedin.com/in/aur%C3%A9lien-latieule-398b8b98/" target="_blank">
+                    <img alt="linkedin"  src="{{asset('asset/linkedin-rond.svg')}}"/>
+                </a>
+                <a href="https://github.com/superelien" target="_blank">
+                    <img alt="linkedin"  src="{{asset('asset/GitHub-Mark.svg')}}"/>
+                </a>
             </div>
             <a href="https://lesjoiesducode.fr/" onclick="window.open('https://lesjoiesducode.fr/', 'exemple', 'height=600, width=800, top=90, left=350, toolbar=no, menubar=no, location=yes, resizable=yes, scrollbars=yes, status=no'); return false;">Juste pour le fun
             </a>
         </div>
     </div>
-</div>
 {% endblock %}
 {% block javascripts %}<script src="../js/parallax.js" ></script>{% endblock %}

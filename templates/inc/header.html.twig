@@ -1,16 +1,34 @@
-<div class="row">
-
-<header >
-        <div >
-            <div >   
-            
-                <nav class="top-nav">
-                    <div class="menu-wrapper">
-                        <a href={{ path('index') }}> <img class="logocenter img-fluid" src="{{asset('asset/LA_WA_BO.png')}}" alt="logo La Web Agency"></a>
-
-                        <ul class="menu">
+<header class="row">
+    <div >
+        <div >   
+            <nav class="top-nav">
+                <div class="menu-wrapper">
+                    <a href={{ path('index') }}> <img class="logocenter img-fluid" src="{{asset('asset/LA_WA_BO.png')}}" alt="logo La Web Agency"></a>
+                    <ul class="menu">
+                        <li>
+                            <a href="{{ path('index') }}">home</a>
+                        </li>
+                        <li>
+                             <a href="{{ path('aboutme') }}">à propos</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('works') }}">travaux</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('contact') }}">contact</a>
+                        </li>
+                        <li>
+                            <button class="menu-close" aria-label="close menu">✕</button>
+                        </li>
+                    </ul> 
+                </div>
+                <div class="fixed-menu">
+                    <a href={{ path('index') }}> <img class="logocenter img-fluid" src="{{asset('asset/LA_WA_BO.png')}}" alt="logo La Web Agency"></a>
+                    <button class="menu-open" title="Menu" aria-label="open menu">☰</button>
+                    <div class="menuFix">
+                        <ul class="menuFix">
                             <li>
-                                <a href="{{ path('index') }}">home</a>
+                                 <a href="{{ path('index') }}">home</a>
                             </li>
                             <li>
                                 <a href="{{ path('aboutme') }}">à propos</a>
@@ -21,33 +39,10 @@
                             <li>
                                 <a href="{{ path('contact') }}">contact</a>
                             </li>
-                            <li>
-                                <button class="menu-close" aria-label="close menu">✕</button>
-                            </li>
-                        </ul> 
+                        </ul>
                     </div>
-                    <div class="fixed-menu">
-                        <a href={{ path('index') }}> <img class="logocenter img-fluid" src="{{asset('asset/LA_WA_BO.png')}}" alt="logo La Web Agency"></a>
-                        <button class="menu-open" title="Menu" aria-label="open menu">☰</button>
-                        <div class="menuFix">
-                            <ul class="menuFix">
-                                <li>
-                                    <a href="{{ path('index') }}">home</a>
-                                </li>
-                                <li>
-                                    <a href="{{ path('aboutme') }}">à propos</a>
-                                </li>
-                                <li>
-                                    <a href="{{ path('works') }}">travaux</a>
-                                </li>
-                                <li>
-                                    <a href="{{ path('contact') }}">contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </div>
+                </div>
+            </nav>
         </div>
-    </header>
-</div>
+    </div>
+</header>
