@@ -75,8 +75,7 @@ footer{
     display: flex;
     height: 100vh;
     background: url(https://picsum.photos/1920/1080?random=) no-repeat center / cover;
-/*    background: url(../asset/octopus_2560x1600.jpg) no-repeat center / cover;
- */ }
+}
   
   .top-banner-overlay {
     display: flex;
@@ -102,7 +101,7 @@ footer{
     margin-top: 7px;
   }
   .menuFix{
-    margin-top:10%;
+    margin-top:100%;
   }
   
   /* .menu-wrapper
