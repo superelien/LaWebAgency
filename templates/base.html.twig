@@ -21,8 +21,8 @@
     <link rel="shortcut icon" href="{{asset('asset/LA_WA_BO-min.png')}}"  type="image/x-icon">
     <link rel="icon" href="{{asset('asset/LA_WA_BO-min.png')}}" type="image/x-icon">
 
-
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
     <link href="https://fonts.googleapis.com/css?family=McLaren|Staatliches&display=swap" rel="stylesheet">
@@ -57,9 +57,9 @@
         {% for message in messages %}
         <div class="flash-{{ label }} alert-dismissible ml-5 p-3 fade show" role="alert">
             {{ message }}
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            {# <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
-            </button>
+            </button> #}
         </div>
         {% endfor %}
         {% endfor %}
@@ -68,9 +68,9 @@
         {% for message in messages %}
         <div class="flash-{{ label }} alert-dismissible ml-5 p-3 fade show" role="alert">
             {{ message }}
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            {# <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
-            </button>
+            </button> #}
             
         </div>
         {% endfor %}
