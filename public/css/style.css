@@ -180,6 +180,7 @@ footer{
     display: none;
   }
   #aboutmeCV{
+    height: 100%;
     padding: 20px;
     background: #FAA61FCC;
     box-shadow: 0 0 10px black;
@@ -189,7 +190,11 @@ footer{
     width: 40%;
     max-width: 150px;
   }
- 
+
+  #gototop .fa{
+    font-size: xx-large;
+    color: #FAA61F;
+  }
   #myCV{
     font-family: 'ubuntu', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 500;

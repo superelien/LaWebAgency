@@ -4,25 +4,27 @@
 {% block body %}
 <div id="cvPage" class="row">
     <div  class=" text-left col-md-3">
-        <div id="aboutmeCV"  >
-            <h1>me my sef and I</h1>
-            <img class="img-fluid" src="{{asset('asset/MoiCV2.jpg')}}" alt="photo aurelien latieule">
-            <p>tel des mentos dans une bouteille de coca light  <br> j'allie mon oeil de linx et mes capacités techniques, <br> pour tout faire péter !!</p>
-            <p>Certificat Opquast® : Maîtrise de la qualité en projet Web</p>
-            <a href="https://directory.opquast.com/fr/certificat/619AQI/" target="_blank"><img class="img-fluid" src="{{asset('asset/expert.svg')}}" alt="Cerification Opquast"></a>
-            <p>Vous pouvez jeter un oeil à mon site d'étude :</p>
-            <a href="https://www.la-projets.yo.fr/" target="_blank">Mon 1er site</a>
-            <ul>
-                <li>Né le 27/09/1979 à Carcassonne</li>
-                <li>Permis: B (Voiture)</li>
-                <li>11170 Pezens, France</li>
-                <li> 06.22.07.27.51  </li>
-                <li><a class="adresse" href="mailto:aurlat.simplon@gmail.com" >E-mail</a></li>
-            </ul>
-            <a href="{{path('aboutme')}}"><i class="fa fa-chevron-left"></i> Retour</a>
+        <div id="aboutmeCV" >
+            <div class="CvFixed">
+                <h1>me my sef and I</h1>
+                <img class="img-fluid" src="{{asset('asset/MoiCV2.jpg')}}" alt="photo aurelien latieule">
+                <p>tel des mentos dans une bouteille de coca light  <br> j'allie mon oeil de linx et mes capacités techniques, <br> pour tout faire péter !!</p>
+                <p>Certificat Opquast® : Maîtrise de la qualité en projet Web</p>
+                <a href="https://directory.opquast.com/fr/certificat/619AQI/" target="_blank"><img class="img-fluid" src="{{asset('asset/expert.svg')}}" alt="Cerification Opquast"></a>
+                <p>Vous pouvez jeter un oeil à mon site d'étude :</p>
+                <a href="https://www.la-projets.yo.fr/" target="_blank">Mon 1er site</a>
+                <ul>
+                    <li>Né le 27/09/1979 à Carcassonne</li>
+                    <li>Permis: B (Voiture)</li>
+                    <li>11170 Pezens, France</li>
+                    <li> 06.22.07.27.51  </li>
+                    <li><a class="adresse" href="mailto:aurlat.simplon@gmail.com" >E-mail</a></li>
+                </ul>
+                <a href="{{path('aboutme')}}"><i class="fa fa-chevron-left"></i> Retour</a>
+            </div>
         </div>
     </div>
-    <div class="col-9">
+    <div class="col-md-9 col-12">
         <div id="myCV" class="container">
             <div class="row CV" >
                 <div class="col-12 text-center">
