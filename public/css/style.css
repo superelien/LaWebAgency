@@ -53,17 +53,14 @@ footer{
     font-family: 'McLaren', cursive;
     cursor: pointer;
   }
-  
-  #aboutme {
-      position: sticky;
-      left: 2%;
-      top: 2%;
-      text-align: left;
+  #cvPage{
+    margin-left: 105px;
   }
+
   #cvPage h1, #cvPage h2{
     color: #FAA61F;
-
   }
+
   .mentions{
     font-size: 0.8rem;
   }
@@ -74,6 +71,7 @@ footer{
 .top-banner {
     display: flex;
     height: 100vh;
+    padding: 20px;
     background: url(https://picsum.photos/1920/1080?random=) no-repeat center / cover;
 }
   
@@ -88,9 +86,9 @@ footer{
     background: rgba(0, 0, 0, .7);
   }
   
-  .top-banner-overlay.is-moved {
+  /* .top-banner-overlay.is-moved {
     transform: translateX(200px);
-  }
+  } */
   
   .top-banner-overlay p {
     font-size: 1rem;
@@ -181,19 +179,23 @@ footer{
     color: white;
     display: none;
   }
-
-  #aboutme {
+  #aboutmeCV{
     padding: 20px;
-    background-color:#FAA61F55;
-    color: teal;
-    margin-left: 135px;
+    background: #FAA61FCC;
+    box-shadow: 0 0 10px black;
+    color: lightgray;
   }
+  #aboutmeCV img{
+    width: 40%;
+    max-width: 150px;
+  }
+ 
   #myCV{
     font-family: 'ubuntu', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 500;
     font-size: 0.9rem;
     letter-spacing: 0.05rem;
-    color: gray;
+    color: lightgray;
     text-transform: uppercase;
   }
   #myCV h3{
@@ -202,7 +204,6 @@ footer{
     color: white;
   }
   #project {
-    padding: 20px;
     background-color: darkcyan;
     color: darkseagreen;
   }
@@ -219,7 +220,7 @@ footer{
   .carding img{
     margin-top: 12px;
   }
-
+  
   #contact {
     padding: 20px;
     background-color: goldenrod;
@@ -304,17 +305,21 @@ footer{
   
 }
 @media (max-width: 1000px) {
-  .three {
+  .two, .one, .three, #container {
     display: none;
   }
-  #myCV {
-    margin-left: 20%;
-  }
+  .titlemobil {
+    display: block;
+    width: 100%;
+}
   h1 {
     font-size:2rem;
   }
   h2 {
     font-size:1.4rem;
+  }
+  #cvPage {
+    margin-left: 0;
   }
 
   .top-nav .fixed-menu {
@@ -359,13 +364,7 @@ footer{
   h2 {
     font-size:1.20rem;
   }
-  .two, .one, #container {
-    display: none;
-  }
-  .titlemobil {
-    display: block;
-    width: 100%;
-}
+  
 .top-nav .menu {
   margin-top: 50%;
 }

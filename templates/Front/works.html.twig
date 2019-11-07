@@ -4,16 +4,12 @@
 {% block body %}
 <section id="project" class="row top-banner">
         <div class="top-banner-overlay titlemobil col-lg-12">
-            <h1>LA Web Agency</h1>
-            <p>juste de vous à moi</p>
+            <h1>Mes réalisations</h1>
+            <p>Site web & Infographie</p>
             <img class="img-fluid logoAbout" src="{{asset('asset/LA_WA_BO.png')}}" alt="logo La web agency">
-            <p>Au service de votre vision /
-                Création, essentiel, communication, diffusion, récréation, action
-            </p>
-            <p>Re naitre dans la même peau, avec un esprit neuf; 
-                Être un semblabe, mais atypique; 
-                Ex aequo sur des lignes différentes;
-            </p>
+            <p>Mon cursus et mes expériences me permettent de fournir une prestation globale</p>
+            <p>Vous trouverez en dessous une sélection de mes travaux.</p>
+            <a href="#myWork" class="btn btn-primary"><i class="fa fa-arrow-down"></i></a>
         </div>
         <div id="container">
             <div class="slide one">
@@ -25,7 +21,7 @@
             <div class="slide two">
                 <div class="top-banner-overlay slide four">
                     <p>Vous trouverez en dessous une sélection de mes travaux.</p>
-                    <i class="fa fa-arrow-down"></i>
+                    <a href="#myWork" class="btn btn-primary"><i class="fa fa-arrow-down"></i></a>
                 </div>
             </div>
             <div class="slide three">
@@ -38,7 +34,7 @@
     </section>
         <div class="CartCarding">
         <div class="container-fluid">
-            <div class="row">
+            <div class="row" id="myWork">
                 <section class="carding text-center col-xl-3 col-lg-4 col-sm-5">
                     <p>#web #infographie</p>
                     <img src="{{asset('asset/killybegs.jpg')}}" class="card-img-top" alt="logo killybegs le groupe">
