@@ -190,7 +190,10 @@ footer{
     width: 40%;
     max-width: 150px;
   }
-
+  #gototop {
+    position: relative;
+    
+  }
   #gototop .fa{
     font-size: xx-large;
     color: #FAA61F;
