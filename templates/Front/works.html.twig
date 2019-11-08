@@ -35,65 +35,38 @@
         <div class="CartCarding">
         <div class="container-fluid">
             <div class="row" id="myWork">
+                {% for work in works %}
                 <section class="carding text-center col-xl-3 col-lg-4 col-sm-5">
-                    <p>#web #infographie</p>
-                    <img src="{{asset('asset/killybegs.jpg')}}" class="card-img-top" alt="logo killybegs le groupe">
+                    <p>{{ work.tags }}</p>
+                    <img src="{{ vich_uploader_asset(work, 'imageFile') }}" class="card-img-top" alt="photo {{ work.title }}">
                     <div class="card-body">
-                        <h5 class="card-title">Killybegs, groupe de musique</h5>
-                        <p class="card-text">Site en Wordpress, création de l'identité visuelle et rédaction.</p>
-                        <a href="https://killybegs.band/" target="_blank" class="btn btn-primary">le site</a>
-                    </div>
-                </section>
-                <section class="carding text-center col-xl-3 col-lg-4 col-sm-5">
-                    <p>#web</p>
-                    <img src="{{asset('asset/DomainLefortMetaCard.jpg')}}" class="card-img-top" alt="logo Domaine le fort">
-                    <div class="card-body">
-                        <h5 class="card-title">Domaine le Fort, très bon producteur de vins Malepère</h5>
-                        <p class="card-text">Site en code pur sous PHP/Symfony, back-office gestion des contenus et design.</p>
-                        <a href="https://www.domainelefort.com/home" target="_blank" class="btn btn-primary">le site</a>
-                    </div>
-                </section>
-                <section class="carding text-center col-xl-3 col-lg-4 col-sm-5">
-                    <p>#web #infographie<p>
-                    <img src="{{asset('asset/logo-game-jam-carcassonne-aude.png')}}" class="card-img-top" alt="logo game jam Carcassonne 2019">
-                    <div class="card-body">
-                        <h5 class="card-title">Game Jam Carcassonne 2019</h5>
-                        <p class="card-text">Site en Html5 Css3, création de l'identité visuelle et rédaction.</p>
-                        <a href="https://www.game-jam-carcassonne.fr//" target="_blank" class="btn btn-primary">le site</a>
-                    </div>
-                </section>
-                <section class="carding text-center col-xl-3 col-lg-4 col-sm-5">
-                    <p>#infographie</p>
-                    <img src="{{asset('asset/ROND_CD_withlove.png')}}" class="card-img-top" alt="CD Les Albouyz">
-                    <div class="card-body">
-                        <h5 class="card-title">The Albouyz, Groupe de folk</h5>
-                        <p class="card-text">Infographie, cd Digipack.</p>
-                        
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        la pochette
-                        </button>
-
+                        <h5 class="card-title">{{ work.title }}</h5>
+                        <p class="card-text">{{ work.description }}</p>
+                        {% if work.linkWebsite %}
+                        <a href="{{ work.linkWebsite }}" target="_blank" class="btn btn-primary">le site</a>
+                        {% else  %}
+                    <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">le visuel</button>
                         <!-- Modal -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                            <h5 class="modal-title" id="exampleModalLabel">The Albouyz Digipack</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            <div class="modal-body">
-                                <img src="{{asset('asset/DIGIPACK_withlove.jpg')}}" class="card-img-top" alt="CD Les Albouyz">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                        <h5 class="modal-title" id="exampleModalLabel">{{ work.title }}</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div class="modal-body">
+                                        <img src="{{ vich_uploader_asset(work, 'imageFile') }}" class="card-img" alt="photo {{ work.title }}">
+                                    </div>
+                                    <div class="">
+                                       <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
-
+                        {% endif %}
                     </div>
-                </section>
+                </section>     
+            {% endfor %}
             </div>
         </div>
     </div>

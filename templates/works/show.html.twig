@@ -3,6 +3,9 @@
 {% block title %}Works{% endblock %}
 
 {% block body %}
+<div class="row">
+        <div class="col-1" ></div>
+        <div class="col-11">
     <h1>Works</h1>
 
     <table class="table">
@@ -17,7 +20,10 @@
             </tr>
             <tr>
                 <th>Image</th>
-                <td>{{ work.image }}</td>
+                {# <td>{{ work.image }} <img src="{{ vich_uploader_asset(item, work.image) }}"></td> #}
+                <td><img src="{{ work.imageFile }}" style="width:64px;height:auto;"/>
+                    <img src="{{ vich_uploader_asset(work, 'imageFile') }}" alt="photo {{ work.title }}" class="img-fluid" style="width:64px;height:auto;">
+                </td>
             </tr>
             <tr>
                 <th>UpdateAt</th>
@@ -31,10 +37,10 @@
                 <th>Tags</th>
                 <td>{{ work.tags }}</td>
             </tr>
-            <tr>
-                <th>ImageBig</th>
-                <td>{{ work.imageBig }}</td>
-            </tr>
+            {# <tr>
+                <th>Imagebig</th>
+                <td>{{ work.imagebig }}</td>
+            </tr> #}
             <tr>
                 <th>LinkWebsite</th>
                 <td>{{ work.linkWebsite }}</td>
@@ -47,4 +53,6 @@
     <a href="{{ path('works_edit', {'id': work.id}) }}">edit</a>
 
     {{ include('works/_delete_form.html.twig') }}
+        </div>
+    </div>
 {% endblock %}

@@ -41,6 +41,7 @@ footer{
     background: transparent;
     outline: none;
     cursor: pointer;
+    font-family: 'McLaren', cursive;
   }
   
   button:active {

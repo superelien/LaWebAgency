@@ -3,6 +3,9 @@
 {% block title %}Works index{% endblock %}
 
 {% block body %}
+<div class="row">
+        <div class="col-1" ></div>
+        <div class="col-11">
     <h1>Works index</h1>
 
     <table class="table">
@@ -14,7 +17,7 @@
                 <th>UpdateAt</th>
                 <th>Description</th>
                 <th>Tags</th>
-                <th>ImageBig</th>
+                {# <th>Imagebig</th> #}
                 <th>LinkWebsite</th>
                 <th>actions</th>
             </tr>
@@ -24,11 +27,13 @@
             <tr>
                 <td>{{ work.id }}</td>
                 <td>{{ work.title }}</td>
-                <td>{{ work.image }}</td>
+                <td><img src="{{ work.imageFile }}" style="width:64px;height:auto;"/>
+                    <img src="{{ vich_uploader_asset(work, 'imageFile') }}" alt="photo {{ work.title }}" class="img-fluid" style="width:64px;height:auto;">
+                </td>
                 <td>{{ work.updateAt ? work.updateAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ work.description }}</td>
                 <td>{{ work.tags }}</td>
-                <td>{{ work.imageBig }}</td>
+                {# <td>{{ work.imagebig }}</td> #}
                 <td>{{ work.linkWebsite }}</td>
                 <td>
                     <a href="{{ path('works_show', {'id': work.id}) }}">show</a>
@@ -44,4 +49,6 @@
     </table>
 
     <a href="{{ path('works_new') }}">Create new</a>
+        </div>
+    </div>
 {% endblock %}

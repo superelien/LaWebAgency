@@ -6,6 +6,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
+use App\Repository\WorksRepository;
 use App\Form\ContactType;
 use App\Entity\Contact;
 
@@ -24,9 +25,11 @@ class FrontController extends AbstractController
     {
         return $this->render('Front/aboutmeCV.html.twig');
     }
-    public function works()
+    public function worksFront(WorksRepository $worksRepository): Response
     {
-        return $this->render('Front/works.html.twig');
+        return $this->render('Front/works.html.twig', [
+            'works' => $worksRepository->findAll(),
+        ]);
     }
     public function contact(Request $request, \Swift_Mailer $mailer)
     {
