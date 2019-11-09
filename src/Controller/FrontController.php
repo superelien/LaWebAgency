@@ -25,7 +25,7 @@ class FrontController extends AbstractController
     {
         return $this->render('Front/aboutmeCV.html.twig');
     }
-    public function worksFront(WorksRepository $worksRepository): Response
+    public function frontWorks(WorksRepository $worksRepository): Response
     {
         return $this->render('Front/works.html.twig', [
             'works' => $worksRepository->findAll(),

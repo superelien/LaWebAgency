@@ -10,9 +10,9 @@ aboutmeCV:
     path: /aboutmeCV
     controller: App\Controller\FrontController::aboutmeCV
 
-worksFront:
-    path: /worksFront
-    controller: App\Controller\FrontController::worksFront
+frontWorks:
+    path: /frontWorks
+    controller: App\Controller\FrontController::frontWorks
 
 worksWeb:
     path: /works/web

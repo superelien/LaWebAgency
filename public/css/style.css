@@ -187,7 +187,7 @@ footer{
     box-shadow: 0 0 10px black;
     color: lightgray;
   }
-  #aboutmeCV img{
+  .CvFixed img{
     width: 40%;
     max-width: 150px;
   }
