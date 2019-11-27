@@ -35,23 +35,43 @@
         <div class="CartCarding">
         <div class="container-fluid">
             <div class="row" id="myWork">
-                {% for work in works %}
-                <section class="carding text-center col-xl-3 col-lg-4 col-sm-5">
-                    <p>{{ work.tags }}</p>
+                <div class="col-12 BoWall text-center">
+                    <h2>Trouvez ce que vous cherchez :</h2>
+                    <span id="myBtnContainer"></span>
+                    <!-- <label for="searchYTSelect"><i class="fas fa-search"></i></label> -->
+                    <span id="searchYTSelect" class="justify-content-center align-item-center" >
+                        <select id="inputSearchSelect">
+                            <option value=""> par tags : </option>
+                            <option value="#web">#web</option>
+                            <option value="#infographie">#infographie</option>
+                            <option value="#photo">#photo</option>
+
+                        </select>
+                    </span>
+                    ou 
+                    <span id="searchYT" class="justify-content-center align-item-center" >
+                        <input type="search" id="inputSearch" name="q"
+                          aria-label="Search through site content" placeholder=" par mot clé">
+                        <button id="btnSearch" class="btn" ><i class="fa fa-search"></i></button>
+                    </span>
+                </div>
+            {% for work in works %}
+                <section class="carding text-center col-xl-3 col-lg-4 col-sm-5 itemParentContainer">
+                    <p class="">{{ work.tags }}</p>
                     <img src="{{ vich_uploader_asset(work, 'imageFile') }}" class="card-img-top" alt="photo {{ work.title }}">
                     <div class="card-body">
                         <h5 class="card-title">{{ work.title }}</h5>
                         <p class="card-text">{{ work.description }}</p>
                         {% if work.linkWebsite %}
-                        <a href="{{ work.linkWebsite }}" target="_blank" class="btn btn-primary">le site</a>
+                        <a href="{{ work.linkWebsite }}" target="_blank" class="btn ">le site</a>
                         {% else  %}
                     <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">le visuel</button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#Modal{{ work.title }}">le visuel</button>
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="Modal{{ work.title }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
-                                        <h5 class="modal-title" id="exampleModalLabel">{{ work.title }}</h5>
+                                        <h5 class="modal-title" id="ModalLabel{{ work.title }}">{{ work.title }}</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -59,25 +79,26 @@
                                         <img src="{{ vich_uploader_asset(work, 'imageFile') }}" class="card-img" alt="photo {{ work.title }}">
                                     </div>
                                     <div class="">
-                                       <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>                                        </div>
+                                       <button type="button" class="btn " data-dismiss="modal">Fermer</button>                                        </div>
                                     </div>
                                 </div>
                             </div>
                         {% endif %}
                     </div>
                 </section>     
-            {% endfor %}
+            {% endfor %} 
             </div>
         </div>
     </div>
 </div>
 {% endblock %}
 {% block javascripts %}
-<script src="../js/parallax.js" ></script>
+<script src="{{ asset('js/parallax.js') }}"></script>
+<script src="{{ asset('js/WorksSelector.js') }}"></script>
 <script>
 $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
-})
+});
 </script>
 
 {% endblock %}

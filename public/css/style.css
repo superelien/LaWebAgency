@@ -42,6 +42,7 @@ footer{
     outline: none;
     cursor: pointer;
     font-family: 'McLaren', cursive;
+    color: white;
   }
   
   button:active {
@@ -64,6 +65,13 @@ footer{
 
   .mentions{
     font-size: 0.8rem;
+  }
+  .BoWall{
+    height: 100%;
+    padding: 20px;
+    background: #FAA61FCC;
+    box-shadow: 0 0 10px black;
+    color: gray;
   }
   
   /* .top-banner
@@ -249,6 +257,30 @@ footer{
     justify-content: center;
     align-items: center;
  
+  }
+
+  #myWork select, #myWork input{ 
+    background-color: #1E7E85;
+    color: white;
+    border: 0;
+    height: 38px;
+    border-bottom: 2px solid #1E7E85;
+  }
+  #myWork button{ 
+    background-color: #1E7E85;
+    color: white;
+    border: 0;
+    border-radius: 0;
+    border-top: 2px solid #1E7E85;
+  }
+  #myWork section button, #myWork section a{ 
+    background-color: #FAA61FCC;
+    color: white;
+    border: 0;
+    border-radius: .25rem;
+  }
+  #myWork input::placeholder {
+    color: white;
   }
   
   .slide{

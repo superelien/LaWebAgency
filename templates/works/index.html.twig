@@ -3,52 +3,59 @@
 {% block title %}Works index{% endblock %}
 
 {% block body %}
-<div class="row">
-        <div class="col-1" ></div>
-        <div class="col-11">
-    <h1>Works index</h1>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Title</th>
-                <th>Image</th>
-                <th>UpdateAt</th>
-                <th>Description</th>
-                <th>Tags</th>
-                {# <th>Imagebig</th> #}
-                <th>LinkWebsite</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for work in works %}
-            <tr>
-                <td>{{ work.id }}</td>
-                <td>{{ work.title }}</td>
-                <td><img src="{{ work.imageFile }}" style="width:64px;height:auto;"/>
-                    <img src="{{ vich_uploader_asset(work, 'imageFile') }}" alt="photo {{ work.title }}" class="img-fluid" style="width:64px;height:auto;">
-                </td>
-                <td>{{ work.updateAt ? work.updateAt|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ work.description }}</td>
-                <td>{{ work.tags }}</td>
-                {# <td>{{ work.imagebig }}</td> #}
-                <td>{{ work.linkWebsite }}</td>
-                <td>
-                    <a href="{{ path('works_show', {'id': work.id}) }}">show</a>
-                    <a href="{{ path('works_edit', {'id': work.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="9">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('works_new') }}">Create new</a>
-        </div>
+<div class="row  top-banner">
+    <div class="col-1" ></div>
+    <div class="col-11 BoWall">
+        <h1>Works index</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Image</th>
+                    <th>UpdateAt</th>
+                    <th>Description</th>
+                    <th>Tags</th>
+                    {# <th>Imagebig</th> #}
+                    <th>LinkWebsite</th>
+                    <th>actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for work in works %}
+                <tr>
+                    <td>{{ work.id }}</td>
+                    <td>{{ work.title }}</td>
+                    <td><img src="{{ work.imageFile }}" style="width:64px;height:auto;"/>
+                        <img src="{{ vich_uploader_asset(work, 'imageFile') }}" alt="photo {{ work.title }}" class="img-fluid" style="width:64px;height:auto;">
+                    </td>
+                    <td>{{ work.updateAt ? work.updateAt|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>{{ work.description }}</td>
+                    <td>{{ work.tags }}</td>
+                    {# <td>{{ work.imagebig }}</td> #}
+                    <td>{{ work.linkWebsite }}</td>
+                    <td>
+                        <a href="{{ path('works_show', {'id': work.id}) }}">show</a>
+                        <a href="{{ path('works_edit', {'id': work.id}) }}">edit</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="9">Pas de chantier fait !!!</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <a href="{{ path('works_new') }}">Create new</a>
     </div>
+</div>
+<div class="row">
+    <div class="col-1">
+
+    </div>
+    <div class="col-11">
+        {% include '@Calendar/calendar.html' %}
+    </div>
+</div>
 {% endblock %}
+

@@ -27,9 +27,11 @@ class FrontController extends AbstractController
     }
     public function frontWorks(WorksRepository $worksRepository): Response
     {
-        return $this->render('Front/works.html.twig', [
+        return $this->render('Front/works.html.twig'
+        , [
             'works' => $worksRepository->findAll(),
-        ]);
+        ]
+    );
     }
     public function contact(Request $request, \Swift_Mailer $mailer)
     {
