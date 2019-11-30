@@ -34,29 +34,6 @@ class CalendarListener
             ->getResult()
         ;
 
-        foreach ($bookings as $booking) {
-            // this create the events with your data (here booking data) to fill calendar
-            $bookingEvent = new Event(
-                $booking->getTitle(),
-                $booking->getBeginAt(),
-                $booking->getEndAt() // If the end date is null or not defined, a all day event is created.
-            );
-
-            /*
-             * Add custom options to events
-             *
-             * For more information see: https://fullcalendar.io/docs/event-object
-             * and: https://github.com/fullcalendar/fullcalendar/blob/master/src/core/options.ts
-             */
-
-            $bookingEvent->setOptions([
-                'backgroundColor' => 'red',
-                'borderColor' => 'red',
-            ]);
-            $bookingEvent->addOption('url', 'https://github.com');
-
-            // finally, add the event to the CalendarEvent to fill the calendar
-            $calendar->addEvent($bookingEvent);
-        }
+        
     }
 }

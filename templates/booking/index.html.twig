@@ -1,8 +1,13 @@
 {% extends 'base.html.twig' %}
 {% block stylesheets %}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.1.0/main.min.css">
+    <link rel="stylesheet" href="{{asset('css/calendar/main.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/calendar/dayMain.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/calendar/timeMain.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/calendar/bootstrapMain.css')}}">
+    {# <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.1.0/main.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.1.0/main.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@4.1.0/main.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@4.1.0/main.min.css"> #}
+
 {% endblock %}
 {% block title %}Booking index{% endblock %}
 {% block body %}
@@ -60,10 +65,15 @@
 </div>
 {% endblock %}
 {% block javascripts %}
-    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.1.0/main.min.js"></script>
+    <script src="{{asset('js/calendar/coreMain.min.js')}}"></script>
+    <script src="{{asset('js/calendar/dayGridMain.min.js')}}"></script>
+    <script src="{{asset('js/calendar/interactMain.min.js')}}"></script>
+    <script src="{{asset('js/calendar/timeGridMain.min.js')}}"></script>
+    <script src="{{asset('js/calendar/bootstrapMain.js')}}"></script>
+    {# <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.1.0/main.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/interaction@4.1.0/main.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.1.0/main.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@4.1.0/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@4.1.0/main.min.js"></script> #}
 
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', () => {
@@ -71,6 +81,8 @@
 
             var calendar = new FullCalendar.Calendar(calendarEl, {
                 defaultView: 'dayGridMonth',
+                selectable: true,
+                aspectRatio: 2.2,
                 editable: true,
                 eventSources: [
                     {
@@ -89,8 +101,17 @@
                     center: 'title',
                     right: 'dayGridMonth,timeGridWeek,timeGridDay',
                 },
-                plugins: [ 'interaction', 'dayGrid', 'timeGrid' ], // https://fullcalendar.io/docs/plugin-index
+    
+                  dateClick: function(info) {
+                    alert('Clicked on: ' + info.dateStr);
+                    alert('Resource ID: ' + info.resource.id);
+                   
+
+                  },
+                  
+                plugins: [ 'interaction', 'dayGrid', 'timeGrid','bootstrap' ], // https://fullcalendar.io/docs/plugin-index
                 timeZone: 'UTC',
+                themeSystem: 'bootstrap',
             });
             calendar.render();
         });
