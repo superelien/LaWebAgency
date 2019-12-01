@@ -2,6 +2,9 @@
 // src/Controller/FrontController.php
 namespace App\Controller;
 
+use App\Entity\Booking;
+use App\Form\BookingType;
+use App\Repository\BookingRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -85,5 +88,14 @@ class FrontController extends AbstractController
     public function mentions()
     {
         return $this->render('Front/legals.html.twig');
+    }
+    /**
+     * @Route("/bookingdate", name="booking_Date", methods={"GET","POST"})
+     */
+    public function bookingDate(BookingRepository $bookingRepository): Response
+    {
+        return $this->render('Front/bookingDate.html.twig', [
+            'bookings' => $bookingRepository->findAll(),
+        ]);
     }
 }

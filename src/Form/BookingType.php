@@ -11,6 +11,8 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
+use Symfony\Component\Form\Extension\Core\Type\TimeType;
 
 class BookingType extends AbstractType
 {
@@ -26,19 +28,43 @@ class BookingType extends AbstractType
                 ]
             ])
             ->add('beginAt', DateType::class, [
-                'label' => 'Commence :',
+                'label' => 'Commence jour :',
                 'attr' => [
                     'class' => 'form-control',
                     'required' => true
-    
+                ],
+                'placeholder' => [
+                    'year' => 'Année', 'month' => 'Mois', 'day' => 'Jour',
+                ]
+            ])
+            ->add('beginAtHour', TimeType::class, [
+                'label' => 'Commence heure :',
+                'attr' => [
+                    'class' => 'form-control',
+                    'required' => true
+                ],
+                'placeholder' => [
+                    'hour' => 'Heure', 'minute' => 'Minute', 'second' => 'Seconde',
                 ]
             ])
             ->add('endAt', DateType::class, [
-                'label' => 'Fini :',
+                'label' => 'Fini jour :',
                 'attr' => [
                     'class' => 'form-control',
                     'required' => true
-    
+                ],
+                'placeholder' => [
+                    'year' => 'Année', 'month' => 'Mois', 'day' => 'Jour',
+                ]
+            ])
+            ->add('endAtHour', TimeType::class, [
+                'label' => 'Fini heure :',
+                'attr' => [
+                    'class' => 'form-control',
+                    'required' => true
+                ],
+                'placeholder' => [
+                    'hour' => 'Heure', 'minute' => 'Minute', 'second' => 'Seconde',
                 ]
             ])
         ;

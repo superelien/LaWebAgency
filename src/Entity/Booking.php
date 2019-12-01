@@ -3,6 +3,10 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Date;
+use Time;
+use DateTime;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\BookingRepository")
@@ -17,14 +21,25 @@ class Booking
     private $id;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="date")
      */
     private $beginAt;
 
     /**
-     * @ORM\Column(type="datetime", nullable=true)
+     * @ORM\Column(type="time")
+     */
+    private $beginAtHour;
+
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
      */
     private $endAt = null;
+
+    /**
+     * @ORM\Column(type="time", nullable=true)
+     */
+    private $endAtHour;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -48,6 +63,18 @@ class Booking
         return $this;
     }
 
+    public function getBeginAtHour(): ?\DateTimeInterface
+    {
+        return $this->beginAtHour;
+    }
+
+    public function setBeginAtHour(\DateTimeInterface $beginAtHour): self
+    {
+        $this->beginAtHour = $beginAtHour;
+
+        return $this;
+    }
+
     public function getEndAt(): ?\DateTimeInterface
     {
         return $this->endAt;
@@ -56,6 +83,18 @@ class Booking
     public function setEndAt(?\DateTimeInterface $endAt = null): self
     {
         $this->endAt = $endAt;
+
+        return $this;
+    }
+
+    public function getEndAtHour(): ?\DateTimeInterface
+    {
+        return $this->endAtHour;
+    }
+
+    public function setEndAtHour(\DateTimeInterface $endAtHour = null): self
+    {
+        $this->endAtHour = $endAtHour;
 
         return $this;
     }

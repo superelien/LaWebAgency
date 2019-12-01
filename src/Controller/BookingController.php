@@ -96,9 +96,12 @@ class BookingController extends AbstractController
     /**
      * @Route("/calendar", name="booking_calendar", methods={"GET","POST"})
      */
-    public function calendar(): Response
+    public function calendar(BookingRepository $bookingRepository): Response
     {
-        return $this->render('booking/calendar.html.twig');
+        return $this->render('booking/calendar.html.twig', [
+            'bookings' => $bookingRepository->findAll(),
+        ]);
     }
+    
 
 }
