@@ -19,10 +19,23 @@ class BookingController extends AbstractController
     /**
      * @Route("/", name="booking_index", methods={"GET","POST"})
      */
-    public function index(BookingRepository $bookingRepository): Response
+    public function index(BookingRepository $bookingRepository, Request $request): Response
     {
+        $booking = new Booking();
+        $form = $this->createForm(BookingType::class, $booking);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($booking);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('booking_index');
+        }
         return $this->render('booking/index.html.twig', [
             'bookings' => $bookingRepository->findAll(),
+            'booking' => $booking,
+            'form' => $form->createView(),
         ]);
     }
 

@@ -24,6 +24,8 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/datepicker.min.css')}}">
+    
 
     <link href="https://fonts.googleapis.com/css?family=McLaren|Staatliches&display=swap" rel="stylesheet">
 
@@ -81,10 +83,12 @@
                         <div class="modal-body"  >
                             <div class="row notice d-flex justify-content-center align-items-center">
                                 <div class="cookie-text col-6">
-                                    <i class="fas fa-cookie fa-lg"></i> Ce site mange des cookies, mais c'est surtout à des fins analytiques et de confort pour votre passage<i class="fas fa-cookie-bite fa-lg"></i>
+                                    <i class="fas fa-cookie fa-lg"></i> 
+                                    <h2>Les Cookies</h2>
+                                    Ce site mange des cookies, mais c'est surtout à des fins analytiques et de confort pour votre surf<i class="fas fa-cookie-bite fa-lg"></i>
                                 </div>
                                 <div class="buttons col-6">
-                                    <a href="#a" onmousemove="clearCoor()" class="btn btn-primary btn-sm m-1" data-dismiss="modal">Okay</a>
+                                    <button href="#a" onmousemove="clearCoor()" class="btn btn-primary btn-sm m-1" data-dismiss="modal">Okay</button>
                                     <button href="#a" id="onmove" onmousemove="myFunction(event)"   class="btn btn-danger btn-sm m-1 displaynone" data-dismiss="modal">Nop</button>
                                     <a href="https://www.lesharicotsdiaboliques.fr/cookies-chocolat-pecan/" class="btn  m-1" target="_blank">En savoir plus... ou pas</a>
                                 </div>
@@ -112,7 +116,7 @@
         <script src="{{ asset('js/js.cookie.js') }}"></script>
 
         <script >
-           // console.log(Cookies.get())
+           //console.log(Cookies.get())
                 $(document).ready(function() {  
                     if(Cookies.get('name') != 'myg') { 
                     Cookies.set('name', 'myg', { expires: 1 })

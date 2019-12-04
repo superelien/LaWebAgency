@@ -28,9 +28,11 @@ class BookingType extends AbstractType
                 ]
             ])
             ->add('beginAt', DateType::class, [
+                'widget' => 'single_text',
+                'html5' => false,
                 'label' => 'Commence jour :',
                 'attr' => [
-                    'class' => 'form-control',
+                    'class' => 'form-control js-datepicker',
                     'required' => true
                 ],
                 'placeholder' => [
