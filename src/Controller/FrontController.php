@@ -32,7 +32,8 @@ class FrontController extends AbstractController
     {
         return $this->render('Front/works.html.twig'
         , [
-            'works' => $worksRepository->findAll(),
+            // 'works' => $worksRepository->findAll(),
+            'works' => $worksRepository->findBy([],['updateAt' => 'DESC']),
         ]
     );
     }
