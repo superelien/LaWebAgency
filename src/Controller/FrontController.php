@@ -36,6 +36,7 @@ class FrontController extends AbstractController
         ]
     );
     }
+    
     public function contact(Request $request, \Swift_Mailer $mailer)
     {
         $contact = new Contact();
@@ -85,10 +86,12 @@ class FrontController extends AbstractController
                        'our_form' => $forms->createView(),
                    ]);
     }
+
     public function mentions()
     {
         return $this->render('Front/legals.html.twig');
     }
+
     /**
      * @Route("/bookingdate", name="booking_Date", methods={"GET","POST"})
      */

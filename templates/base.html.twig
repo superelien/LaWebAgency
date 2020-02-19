@@ -88,8 +88,8 @@
                                     Ce site mange des cookies, mais c'est surtout à des fins analytiques et de confort pour votre surf<i class="fas fa-cookie-bite fa-lg"></i>
                                 </div>
                                 <div class="buttons col-6">
-                                    <button href="#a" onmousemove="clearCoor()" class="btn btn-primary btn-sm m-1" data-dismiss="modal">Okay</button>
-                                    <button href="#a" id="onmove" onmousemove="myFunction(event)"   class="btn btn-danger btn-sm m-1 displaynone" data-dismiss="modal">Nop</button>
+                                    <button href="#a" onclick="CreateCookie()" class="btn btn-primary btn-sm m-1" data-dismiss="modal">Okay</button>
+                                    <a href="https://www.ecosia.org/"   onclick="deleteAllCookies()"  class="btn btn-danger btn-sm m-1 displaynone" >Nop</a>
                                     <a href="https://www.lesharicotsdiaboliques.fr/cookies-chocolat-pecan/" class="btn  m-1" target="_blank">En savoir plus... ou pas</a>
                                 </div>
                             </div>
@@ -116,23 +116,29 @@
         <script src="{{ asset('js/js.cookie.js') }}"></script>
 
         <script >
-           //console.log(Cookies.get())
-                $(document).ready(function() {  
-                    if(Cookies.get('name') != 'myg') { 
-                    Cookies.set('name', 'myg', { expires: 1 })
-                    $('#cookieModal').modal('show');
-                    
-                  }
-                });
-        </script>
-        <script>
-                function myFunction(e) {
-                    document.getElementById("onmove").style.display = "none";
-                  }
-                  function clearCoor() {
-                    document.getElementById("onmove").style.display = "inline-block";
-                  }
-        </script>
+            //console.log(Cookies.get())
+                 $(document).ready(function() {  
+                     if(!Cookies.get('lawebagency.net')) { 
+                     
+                     $('#cookieModal').modal('show'); 
+                   }
+                 });
+ 
+                   function CreateCookie() {
+                     Cookies.set('lawebagency.net', 'presence', { expires: 1 });
+                   }
+ 
+                   function deleteAllCookies() {
+                     var cookies = document.cookie.split(";");
+                 
+                     for (var i = 0; i < cookies.length; i++) {
+                         var cookie = cookies[i];
+                         var eqPos = cookie.indexOf("=");
+                         var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+                         document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+                     }
+                 }
+         </script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
