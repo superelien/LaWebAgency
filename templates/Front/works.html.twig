@@ -58,7 +58,7 @@
             {% for work in works %}
                 <section class="carding text-center col-xl-2 col-lg-3 col-md-4 col-xs-6 col-12 itemParentContainer">
                     <p class="">{{ work.tags }}</p>
-                    <img src="{{ vich_uploader_asset(work, 'imageFile') }}" class="card-img-top" alt="photo {{ work.title }}">
+                    <img src="{{ vich_uploader_asset(work, 'imageFile') }}" class="card-img-top img-fluid" alt="photo {{ work.title }}">
                     <div class="card-body">
                         <h5 class="card-title">{{ work.title }}</h5>
                         <p class="card-text">{{ work.description }}</p>
@@ -66,17 +66,16 @@
                         <a href="{{ work.linkWebsite }}" target="_blank" class="btn ">le site</a>
                         {% else  %}
                     <!-- Button trigger modal -->
-                        <button type="button" class="btn" data-toggle="modal" data-target="#Modal{{ work.title }}">le visuel</button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#Modal{{work.id}}">le visuel</button>
+
                         <!-- Modal -->
-                        <div class="modal fade" id="Modal{{ work.title }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="Modal{{work.id}}" tabindex="-1" role="dialog" aria-labelledby="ModalLabel{{work.title}}" aria-hidden="true">
                             <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                        <h5 class="modal-title" id="ModalLabel{{ work.title }}">{{ work.title }}</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+                                <div class="modal-content text-center justify-content-center" id="modalWork">
+                                        <h5 class="modal-title" id="ModalLabel{{work.id}}">{{ work.title }}</h5>
+
                                     <div class="modal-body">
-                                        <img src="{{ vich_uploader_asset(work, 'imageFile') }}" class="card-img" alt="photo {{ work.title }}">
+                                        <img src="{{ vich_uploader_asset(work, 'imageFile') }}" class="img-fluid" alt="photo {{ work.title }}">
                                     </div>
                                     <div class="">
                                        <button type="button" class="btn " data-dismiss="modal">Fermer</button>                                        </div>
@@ -95,10 +94,6 @@
 {% block javascripts %}
 <script src="{{ asset('js/parallax.js') }}"></script>
 <script src="{{ asset('js/WorksSelector.js') }}"></script>
-<script>
-$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
-});
-</script>
+
 
 {% endblock %}
