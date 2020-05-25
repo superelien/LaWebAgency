@@ -8,11 +8,14 @@
             <div class="CvFixed">
                 <h1>me my sef and I</h1>
                 <img class="img-fluid" src="{{asset('asset/MoiCV2.jpg')}}" alt="photo aurelien latieule">
-                <p>tel des mentos dans une bouteille de coca light  <br> j'allie mon oeil de linx et mes capacités techniques, <br> pour tout faire péter !!</p>
+                <p>Geek sur la voie de la paternité, je cultive ma cuisine, j'assaisonne ma culture, je garde les yeux grand ouvert et j'apprend à apprendre</p>
+                <p>Profil atypique, 80% autodidacte pourvue d'une dyslexie magique ! </p>
                 <p>Certificat Opquast® : Maîtrise de la qualité en projet Web</p>
                 <a href="https://directory.opquast.com/fr/certificat/619AQI/" target="_blank"><img class="img-fluid" src="{{asset('asset/expert.svg')}}" alt="Cerification Opquast"></a>
-                <p>Vous pouvez jeter un oeil à mon site d'étude :</p>
+                <div class='text-center p-4'>
+                <p>Vous pouvez jeter un oeil à mon site d'étude et mes veilles:</p>
                 <a href="https://www.la-projets.yo.fr/" target="_blank">Mon 1er site</a>
+                </div>
                 <ul>
                     <li>Né le 27/09/1979 à Carcassonne</li>
                     <li>Permis: B (Voiture)</li>
@@ -49,7 +52,7 @@
         </div>
     </div>
     <div class="col-md-9 col-12">
-        <div id="myCV" class="container">
+        {# <div id="myCV" class="container">
             <div class="row CV" >
                 <div class="col-12 text-center">
                     <h1>Aurélien Latieule</h1>
@@ -151,12 +154,14 @@
                 </div>
                                                       <!-- centres interet end -->
                                                      <!-- Contacts section start -->   
-            </div>
+            </div> #}
             <div class="row" id="contacts">
                 <div class="section col-12 text-center" >
+                    <embed src="{{asset('asset/LA_CV_online.pdf')}}" width='100%' height='1200px' type='application/pdf'/>
+                    {# <br>
                     <a href="{{asset('asset/LA_CV_09-19.pdf')}}" target="_blank">
                             CV version téléchargeable
-                    </a>
+                    </a> #}
                 </div>
             </div>
         </div>

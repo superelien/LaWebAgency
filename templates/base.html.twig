@@ -74,13 +74,13 @@
 
             {% include 'inc/footer.html.twig' %}
             {# modal cookies #}
-            <div class="modal" id="cookieModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal" id="cookieModal" tabindex="-1" role="dialog" aria-labelledby="cookieModal" aria-hidden="true">
                 <div class="row notice d-flex justify-content-center align-items-center">
                     <div class="cookie-text col-6">
                         <i class="fas fa-cookie fa-lg"></i> Ce site mange des cookies, mais c'est surtout à des fins analytiques et de confort pour votre passage, merci de votre venue.<i class="fas fa-cookie-bite fa-lg"></i>
                     </div>
                 <div class="buttons col-6">
-                    <a href="#a" onmousemove="clearCoor()" class="btn btn-primary btn-sm m-1" data-dismiss="modal">Okay</a>
+                    <a href="#a" onclick=" CreateCookie()" class="btn btn-primary btn-sm m-1" data-dismiss="modal">Okay</a>
                     {# <button href="#a" id="onmove" onmousemove="myFunction(event)"   class="btn btn-danger btn-sm m-1 displaynone" data-dismiss="modal">Nop</button>
                     <a href="https://www.lesharicotsdiaboliques.fr/cookies-chocolat-pecan/" class="btn  m-1" target="_blank">En savoir plus... ou pas</a> #}
                 </div>
