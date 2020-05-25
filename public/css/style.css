@@ -6,7 +6,6 @@ body {
     background-color: black;
     color: gray;
     font-family: 'Staatliches', cursive;
-    width: 100vw;
 }
 header{
   z-index: 5000;
@@ -62,6 +61,24 @@ footer{
   #cvPage h1, #cvPage h2{
     color: #FAA61F;
   }
+  #cookieModal {
+    position: fixed;
+    bottom: 1%;
+    left: 8%;
+    display: none;
+    outline: 0;
+    top: unset;
+    right: unset;
+    background: #0C676Ecc;
+    color: white;
+    border-radius: 10px 0 10px 0;
+    /* border: 1px solid white; */
+    width: 91%;
+    padding: 0.5%;
+}
+.modal-backdrop{
+  display: none !important;
+}
 
   .mentions{
     font-size: 0.8rem;
