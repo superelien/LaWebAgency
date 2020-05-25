@@ -63,13 +63,34 @@
 
     </div>
 </div>
+{# modal Calendar #}
+<div class="modal" id="CalendarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog container justify-content-center align-items-center" role="document">
+        <div class="modal-content ">
+            <div class="modal-body"  >
+                <div class="row notice d-flex justify-content-center align-items-center">
+                    <div class="col-11 BoWall">
+                        <h1>Create new Booking</h1>
+                    
+                        {{ include('booking/_form.html.twig') }}
+                    
+                        {# <a href="{{ path('booking_index') }}">back to list</a> #}
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 {% block javascripts %}
+{{ parent() }} 
     <script src="{{asset('js/calendar/coreMain.min.js')}}"></script>
     <script src="{{asset('js/calendar/dayGridMain.min.js')}}"></script>
     <script src="{{asset('js/calendar/interactMain.min.js')}}"></script>
     <script src="{{asset('js/calendar/timeGridMain.min.js')}}"></script>
-    <script src="{{asset('js/calendar/bootstrapMain.js')}}"></script>
+    <script src="{{asset('js/calendar/timeGridMain.min.js')}}"></script>
+    <script src="{{asset('js/calendar/locales-all.js')}}"></script>
     {# <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.1.0/main.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/interaction@4.1.0/main.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.1.0/main.min.js"></script>
@@ -80,8 +101,10 @@
             var calendarEl = document.getElementById('calendar-holder');
 
             var calendar = new FullCalendar.Calendar(calendarEl, {
-                defaultView: 'dayGridMonth',
+                defaultView: 'timeGridWeek',
                 selectable: true,
+                locales: 'allLocales',
+                locale: 'fr',
                 aspectRatio: 2.2,
                 editable: true,
                 eventSources: [
@@ -96,6 +119,11 @@
                         },
                     },
                 ],
+                businessHours: {
+                    dow: [1, 2, 3, 4, 5], // Monday - Friday
+                    startTime: '9:00', // a start time (10am in this example)
+                    endTime: '17:00', // an end time (6pm in this example)
+                  }, 
                 header: {
                     left: 'prev,next today',
                     center: 'title',
@@ -103,9 +131,8 @@
                 },
     
                   dateClick: function(info) {
-                    alert('Clicked on: ' + info.dateStr);
-                    alert('Resource ID: ' + info.resource.id);
-                   
+                    //alert('Clicked on: ' + info.dateStr);
+                    $('#CalendarModal').modal('show');
 
                   },
                   
@@ -116,4 +143,11 @@
             calendar.render();
         });
     </script>
+
+    <script src="{{ asset('js/datepicker.min.js') }}">
+
+        $( function() {
+          $( "#booking_beginAt" ).datepicker();
+        } );
+        </script>
 {% endblock %}

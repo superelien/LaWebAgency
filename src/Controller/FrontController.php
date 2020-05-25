@@ -32,10 +32,12 @@ class FrontController extends AbstractController
     {
         return $this->render('Front/works.html.twig'
         , [
-            'works' => $worksRepository->findAll(),
+            // 'works' => $worksRepository->findAll(),
+            'works' => $worksRepository->findBy([],['updateAt' => 'DESC']),
         ]
     );
     }
+    
     public function contact(Request $request, \Swift_Mailer $mailer)
     {
         $contact = new Contact();
@@ -85,10 +87,12 @@ class FrontController extends AbstractController
                        'our_form' => $forms->createView(),
                    ]);
     }
+
     public function mentions()
     {
         return $this->render('Front/legals.html.twig');
     }
+
     /**
      * @Route("/bookingdate", name="booking_Date", methods={"GET","POST"})
      */
