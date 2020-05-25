@@ -7,6 +7,10 @@ parameters:
     google_recaptcha_site_key: '%env(GOOGLE_RECAPTCHA_SITE_KEY)%'
     app.path.imgWorks_asset: /asset/imgWorks
     app.path.imgBigWorks_asset: /asset/imgBigWorks
+    locale: 'fr'                         # default locale
+    activated_locales: ['%locale%','en'] # to get as an array
+    locales_requirements: '%locale%|en'  # to inject in controller routes requirements
+    app_locales: fr
 
 services:
     # default configuration for services in *this* file

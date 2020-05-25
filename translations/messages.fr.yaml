@@ -1,0 +1,43 @@
+# HEADER/MENU
+maison : "Maison"
+à propos : "à propos"
+travaux : "travaux"
+contact : "Contact"
+# FOOTER
+Mentions : "Mentions Légales"
+#INDEX
+creatWeb : "Créations Webs  &  Graphiques"
+webSite : "Sites  Internet  &  Infographies"
+#Works
+realisation : "Mes réalisations"
+aboutFreeL1 : "Freelance, je propose des prestations globales, du site vitrine à l'e-commerce, du visuel aux bases de données ..."
+aboutFreeL2 : "Vous trouverez en dessous une sélection de mes travaux."
+trouvez : "Trouvez ce que vous cherchez :"
+tag : "par tags :"
+mots : "par mots clés"
+site : "le site"
+visu : "le visuel"
+fermer : "Fermer"
+ou : "ou"
+#AboutMe
+justeVous : "juste de vous à moi"
+auService : "Au service de votre vision / Création, essentiel, communication, diffusion, récréation, action"
+renaitre : "Re naitre dans la même peau, avec un esprit neuf; Être un semblabe, mais atypique; Ex aequo sur des lignes différentes;"
+#AboutCV
+memy1 : "Geek sur la voie de la paternité, je cultive ma cuisine, j'assaisonne ma culture, je garde les yeux grands ouverts et j'apprend à apprendre"
+memy2 : "Profil atypique, 80% autodidacte pourvue d'une dyslexie magique !"
+memy3 : "Certificat Opquast® : Maîtrise de la qualité en projet Web"
+premierSite : "Vous pouvez jeter un oeil à mon site d'étude et mes veilles:"
+suivez : "Suivez-moi"
+retour : " Retour"
+# contact
+demande : "Envoyez moi votre demande "
+parPhone : "par téléphone"
+parMess : "par message, aucune donnée n'est stockée"
+donnee : "aucune donnée ne sera stockée ou transmise à un tier"
+envoyer : "Envoyer"
+name : "Votre nom"
+mail : "Votre E-mail"
+tel : "Votre numéro de téléphone"
+sujet : "Le sujet de votre message"
+message : "Votre message"

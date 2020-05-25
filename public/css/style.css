@@ -25,6 +25,9 @@ footer{
     font-weight: bold;
     color: #FAA61F ;
 }
+.LocaleFlag{
+  height: 20px;
+}
 
 
 * {

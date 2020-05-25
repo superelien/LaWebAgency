@@ -5,38 +5,34 @@
     <section id="aboutme" class="top-banner row">
         <div class="top-banner-overlay titlemobil col-lg-12">
             <h1>LA Web Agency</h1>
-            <p>juste de vous à moi</p>
-            <p>Freelance, je propose des prestations globales, du site vitrine à l'e-commerce,  du visuel au référencement ...</p>
+            <p>{{ 'justeVous'|trans }}</p>
+            <p>{{ 'aboutFreeL1'|trans }}</p>
             <img class="img-fluid logoAbout" src="{{asset('asset/LA_WA_BO.png')}}" alt="logo La web agency">
-            <p>Au service de votre vision /
-                Création, essentiel, communication, diffusion, récréation, action
+            <p> {{ 'auService'|trans }}
             </p>
-            <p>Re naitre dans la même peau, avec un esprit neuf; 
-                 Être un semblabe, mais atypique; 
-                Ex aequo sur des lignes différentes;
+            <p> {{ 'renaitre'|trans }}
             </p>
         </div>
         <div id="container">
             <div class="slide one">
                 <div class="top-banner-overlay slide four">
                     <img class="img-fluid logoAbout" src="{{asset('asset/LA_WA_BO.png')}}" alt="logo La web agency">
-                    <p>Au service de votre vision /
-                        Vos Créations, projections, communication, diffusion, récréation, action
+                    <p>{{ 'auService'|trans }}
                     </p>
                 </div>
             </div> 
             <div class="slide two">
                 <div class="top-banner-overlay slide four">
-                    <p>Re naitre dans la même peau, avec un esprit neuf <br>
-                         Être un semblabe, mais atypique <br> Ex aequo sur des lignes différentes
+                    <p>{{ 'renaitre'|trans }}
                     </p>
+                    <a href="{{path('aboutmeCV')}}">- Curriculum vitæ (fr) -</a>
                 </div>
             </div>
             <div class="slide three">
                 <div class="top-banner-overlay slide four">
-                    <p>juste de vous à moi</p>
-                    <p>Freelance, je propose des prestations globales, du site vitrine à l'e-commerce, du visuel aux bases de données...</p>                    
-                    <a href="{{path('aboutmeCV')}}">- Mon C.V. -</a>
+                    <p>{{ 'justeVous'|trans }}</p>
+                    <p>{{ 'aboutFreeL1'|trans }}</p>                    
+                    
                 </div>
             </div>
         </div>

@@ -1,0 +1,43 @@
+# HEADER/MENU
+maison : "Home"
+à propos : "About me"
+travaux : "Works"
+contact : "Contact"
+# FOOTER
+Mentions : "Terms"
+#INDEX
+creatWeb : "Webs  &  Graphics Creations"
+webSite : "Websites  &  infographics"
+#Works
+realisation : "My Works"
+aboutFreeL1 : "i'm Freelance, I offer global services, from the showcase site to e-commerce, from visual to databases ..."
+aboutFreeL2 : "You will find below a selection of my works."
+trouvez : "Find what you are looking for:"
+tag : "by tags :"
+mots : "by keywords"
+site : "website"
+visu : "visual"
+fermer : "Close"
+ou : "or"
+# AboutMe
+justeVous : "just from you to me"
+auService : "Serving your vision / Creation, essential, communication, dissemination, recreation, action"
+renaitre : "To be reborn in the same skin, with a new spirit; Be like, but atypical; Tie on different lines;"
+#AboutCV
+memy1 : "Geek on the road to fatherhood, I cultivate my cuisine, I season my culture, I keep my eyes wide open and I learn to learn"
+memy2 : "Atypical profile, 80% self-taught with magic dyslexia!"
+memy3 : "Opquast® certificate: Quality control in web projects"
+premierSite : "You can take a look at my study site and my watches:"
+suivez : "Follow me"
+retour : " Back"
+# contact
+demande : "Send me your request"
+parPhone : "by telephone"
+parMess : "by message, no data is stored"
+donnee : "no data will be stored or transmitted to a third party"
+envoyer : 'Send'
+name : "Your Name"
+mail : "Your email"
+tel : "Your phone number"
+sujet : "Your message"
+message : "The subject of your message"

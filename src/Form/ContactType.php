@@ -22,38 +22,38 @@ class ContactType extends AbstractType
     {
         $builder
         ->add('name', TextType::class, [
-            'label' => 'Votre nom :',
+            // 'label' => 'Votre nom :',
             'attr' => [
-                'class' => 'form-control',
+                'class' => 'form-control mb-3',
                 'required' => true
 
             ]
         ])
         ->add('mail', EmailType::class, [
-            'label' => 'Votre E-mail :',
+            // 'label' => 'Votre E-mail :',
             'attr' => [
-                'class' => 'form-control',
+                'class' => 'form-control mb-3',
                 'required' => true
             ]
         ])
         ->add('tel', NumberType::class, [
-            'label' => 'Votre numéro de téléphone :',
+            // 'label' => 'Votre numéro de téléphone :',
             'attr' => [
-                'class' => 'form-control',
+                'class' => 'form-control mb-3',
                 'required' => true
             ]
         ])
         ->add('sujet', TextType::class, [
-            'label' => 'Le sujet de votre message:',
+            // 'label' => 'Le sujet de votre message:',
             'attr' =>  [
-                'class' => 'form-control',
+                'class' => 'form-control mb-3',
                 'required' => true
             ]
         ])
         ->add('message', TextareaType::class, [
-            'label' => 'Votre message:',
+            // 'label' => 'Votre message:',
             'attr' => [
-                'class' => 'form-control',
+                'class' => 'form-control mb-3',
                 'required' => true
             ]
         ])

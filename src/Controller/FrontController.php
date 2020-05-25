@@ -94,7 +94,7 @@ class FrontController extends AbstractController
     }
 
     /**
-     * @Route("/bookingdate", name="booking_Date", methods={"GET","POST"})
+     * @Route("/{_locale}/bookingdate", name="booking_Date", requirements={"_locale"="%locales_requirements%"}, methods={"GET","POST"})
      */
     public function bookingDate(BookingRepository $bookingRepository): Response
     {

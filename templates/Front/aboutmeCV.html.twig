@@ -8,13 +8,13 @@
             <div class="CvFixed">
                 <h1>me my sef and I</h1>
                 <img class="img-fluid" src="{{asset('asset/MoiCV2.jpg')}}" alt="photo aurelien latieule">
-                <p>Geek sur la voie de la paternité, je cultive ma cuisine, j'assaisonne ma culture, je garde les yeux grands ouverts et j'apprend à apprendre</p>
-                <p>Profil atypique, 80% autodidacte pourvue d'une dyslexie magique ! </p>
-                <p>Certificat Opquast® : Maîtrise de la qualité en projet Web</p>
+                <p> {{ "memy1"|trans }} </p>
+                <p>{{ "memy2"|trans }}</p>
+                <p>{{ "memy3"|trans }}</p>
                 <a href="https://directory.opquast.com/fr/certificat/619AQI/" target="_blank"><img class="img-fluid" src="{{asset('asset/expert.svg')}}" alt="Cerification Opquast"></a>
                 <div class='text-center p-4'>
-                <p>Vous pouvez jeter un oeil à mon site d'étude et mes veilles:</p>
-                <a href="https://www.la-projets.yo.fr/" target="_blank">Mon 1er site</a>
+                <p> {{ 'premierSite'|trans }} </p>
+                <a href="https://www.la-projets.yo.fr/" target="_blank">la-projets.yo.fr</a>
                 </div>
                 <ul>
                     <li>Né le 27/09/1979 à Carcassonne</li>
@@ -26,7 +26,7 @@
             </div>
             <div class="row" id="contacts">
                 <div class="section col-12 text-center" >                      
-                    <h2>Suivez-moi</h2>
+                    <h2> {{ 'suivez'|trans }} </h2>
                     <div class="followMe">
                         <a href="https://www.sololearn.com/Profile/9597984#_=_" target="_blank">
                             <img alt="SoloLearn"  src="https://www.sololearn.com/Uploads/icons/sololearn.png" />
@@ -48,7 +48,7 @@
                     </a>
                 </div>
             </div>
-            <a href="{{path('aboutme')}}"><i class="fa fa-chevron-left"></i> Retour</a>
+            <a href="{{path('aboutme')}}"><i class="fa fa-chevron-left"></i> {{ 'retour'|trans}} </a>
         </div>
     </div>
     <div class="col-md-9 col-12">

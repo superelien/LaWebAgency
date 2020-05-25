@@ -1,35 +1,54 @@
 index:
-    path: /
+    path: /{_locale}
     controller: App\Controller\FrontController::index
+    locale:      fr
+    requirements:
+      _locale: '%locales_requirements%'
 
 aboutme:
-    path: /aboutme
+    path: /aboutme/{_locale}
     controller: App\Controller\FrontController::aboutme
+    requirements:
+      _locale: '%locales_requirements%'
 
 aboutmeCV:
-    path: /aboutmeCV
+    path: /aboutmeCV/{_locale}
     controller: App\Controller\FrontController::aboutmeCV
+    requirements:
+      _locale: '%locales_requirements%'
 
 frontWorks:
-    path: /frontWorks
+    path: /frontWorks/{_locale}
     controller: App\Controller\FrontController::frontWorks
+    requirements:
+      _locale: '%locales_requirements%'
 
 worksWeb:
-    path: /works/web
+    path: /works/web/{_locale}
     controller: App\Controller\FrontController::worksWeb
+    requirements:
+      _locale: '%locales_requirements%'
 
 worksGraf:
-    path: /works/Graf
+    path: /works/Graf/{_locale}
     controller: App\Controller\FrontController::worksGraf
+    requirements:
+      _locale: '%locales_requirements%'
 
 contact:
-    path: /contact
+    path: /contact/{_locale}
     controller: App\Controller\FrontController::contact
+    requirements:
+      _locale: '%locales_requirements%'
 
 mentions:
-    path: /mentions
+    path: /mentions/{_locale}
     controller: App\Controller\FrontController::mentions
+    requirements:
+      _locale: '%locales_requirements%'
 
 booking_calendar:
-    path: /booking/calendar
+    path: /booking/calendar/{_locale}
     controller: App\Controller\BookingController::calendar
+    requirements:
+      _locale: '%locales_requirements%'

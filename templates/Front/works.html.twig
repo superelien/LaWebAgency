@@ -1,33 +1,33 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}mon travail{% endblock %}
+{% block title %}{{ 'realisation'|trans }}{% endblock %}
 {% block body %}
 <section id="project" class="row top-banner">
         <div class="top-banner-overlay titlemobil col-lg-12">
-            <h1>Mes réalisations</h1>
-            <p>Site web & Infographie</p>
+            <h1>{{ 'realisation'|trans }}</h1>
+            <p>{{ 'webSite'|trans }}</p>
             <img class="img-fluid logoAbout" src="{{asset('asset/LA_WA_BO.png')}}" alt="logo La web agency">
-            <p>Freelance, je propose des prestations globales, du site vitrine à l'e-commerce,  du visuel au référencement ...</p>
-            <p>Vous trouverez en dessous une sélection de mes travaux.</p>
+            <p> {{ 'aboutFreeL1'|trans }}</p>
+            <p>{{ 'aboutFreeL2'|trans }}</p>
             <a href="#myWork" class="btn btn-primary"><i class="fa fa-arrow-down"></i></a>
         </div>
         <div id="container">
             <div class="slide one">
                 <div class="top-banner-overlay slide four">
                     <img class="img-fluid logoAbout" src="{{asset('asset/LA_WA_BO.png')}}" alt="logo La web agency">
-                    <p>Freelance, je propose des prestations globales, du site vitrine à l'e-commerce,  du visuel au référencement ...</p>
+                    <p>{{ 'aboutFreeL1'|trans }}</p>
                 </div>
             </div>
             <div class="slide two">
                 <div class="top-banner-overlay slide four">
-                    <p>Vous trouverez en dessous une sélection de mes travaux.</p>
+                    <p>{{ 'aboutFreeL2'|trans }}</p>
                     <a href="#myWork" class="btn btn-primary"><i class="fa fa-arrow-down"></i></a>
                 </div>
             </div>
             <div class="slide three">
                 <div class="top-banner-overlay slide four">
-                    <h1>Mes réalisations</h1>
-                    <p>Site web & Infographie</p>
+                    <h1>{{ 'realisation'|trans }}</h1>
+                    <p>{{ 'webSite'|trans }}</p>
                 </div>
             </div>
         </div>
@@ -36,22 +36,21 @@
         <div class="container-fluid">
             <div class="row justify-content-around" id="myWork">
                 <div class="col-12 BoWall text-center">
-                    <h2>Trouvez ce que vous cherchez :</h2>
+                    <h2>{{ 'trouvez'|trans }}</h2>
                     <span id="myBtnContainer"></span>
                     <!-- <label for="searchYTSelect"><i class="fas fa-search"></i></label> -->
                     <span id="searchYTSelect" class="justify-content-center align-item-center" >
                         <select id="inputSearchSelect">
-                            <option value=""> par tags : </option>
+                            <option value="">{{ 'tag'|trans }}</option>
                             <option value="#web">#web</option>
                             <option value="#infographie">#infographie</option>
                             <option value="#photo">#photo</option>
-
                         </select>
                     </span>
-                    ou 
+                    {{ 'ou'|trans }}
                     <span id="searchYT" class="justify-content-center align-item-center" >
                         <input type="search" id="inputSearch" name="q"
-                          aria-label="Search through site content" placeholder=" par mot clé">
+                          aria-label="Search through site content" placeholder="{{ 'mots'|trans }}">
                         <button id="btnSearch" class="btn" ><i class="fa fa-search"></i></button>
                     </span>
                 </div>
@@ -63,22 +62,20 @@
                         <h5 class="card-title">{{ work.title }}</h5>
                         <p class="card-text">{{ work.description }}</p>
                         {% if work.linkWebsite %}
-                        <a href="{{ work.linkWebsite }}" target="_blank" class="btn ">le site</a>
+                        <a href="{{ work.linkWebsite }}" target="_blank" class="btn ">{{ 'site'|trans }}</a>
                         {% else  %}
                     <!-- Button trigger modal -->
-                        <button type="button" class="btn" data-toggle="modal" data-target="#Modal{{work.id}}">le visuel</button>
-
+                        <button type="button" class="btn" data-toggle="modal" data-target="#Modal{{work.id}}">{{ 'visu'|trans }}</button>
                         <!-- Modal -->
                         <div class="modal fade" id="Modal{{work.id}}" tabindex="-1" role="dialog" aria-labelledby="ModalLabel{{work.title}}" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content text-center justify-content-center" id="modalWork">
                                         <h5 class="modal-title" id="ModalLabel{{work.id}}">{{ work.title }}</h5>
-
                                     <div class="modal-body">
                                         <img src="{{ vich_uploader_asset(work, 'imageFile') }}" class="img-fluid" alt="photo {{ work.title }}">
                                     </div>
                                     <div class="">
-                                       <button type="button" class="btn " data-dismiss="modal">Fermer</button> 
+                                       <button type="button" class="btn " data-dismiss="modal"> {{ 'Fermer'|trans }} </button> 
                                     </div>
                                 </div>
                             </div>
@@ -92,8 +89,6 @@
 </div>
 {% endblock %}
 {% block javascripts %}
-<script src="{{ asset('js/parallax.js') }}"></script>
-<script src="{{ asset('js/WorksSelector.js') }}"></script>
-
-
+    <script src="{{ asset('js/parallax.js') }}"></script>
+    <script src="{{ asset('js/WorksSelector.js') }}"></script>
 {% endblock %}
