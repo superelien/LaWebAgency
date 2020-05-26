@@ -6,6 +6,7 @@ contact : "Contact"
 # FOOTER
 Mentions : "Terms"
 #INDEX
+accueil : "Welcome"
 creatWeb : "Webs  &  Graphics Creations"
 webSite : "Websites  &  infographics"
 #Works
@@ -20,6 +21,7 @@ visu : "visual"
 fermer : "Close"
 ou : "or"
 # AboutMe
+
 justeVous : "just from you to me"
 auService : "Serving your vision / Creation, essential, communication, dissemination, recreation, action"
 renaitre : "To be reborn in the same skin, with a new spirit; Be like, but atypical; Tie on different lines;"
@@ -41,3 +43,8 @@ mail : "Your email"
 tel : "Your phone number"
 sujet : "Your message"
 message : "The subject of your message"
+#Terms
+propri : "The lawebagency.net website is the property of Aurélien Latieule, the head office is based at 22 quater, rue du Barry, 11170 PEZENS. Siret number: 853910446 00014"
+heber : "The website is hosted by"
+respons : "Publication manager: Aurélien Latieule."
+mailterms : "You can contact us by phone on 06 22 07 27 51 or by email at"

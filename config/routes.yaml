@@ -6,7 +6,7 @@ index:
       _locale: '%locales_requirements%'
 
 aboutme:
-    path: /aboutme/{_locale}
+    path: /aboutme/{_locale}/
     controller: App\Controller\FrontController::aboutme
     requirements:
       _locale: '%locales_requirements%'

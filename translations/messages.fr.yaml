@@ -1,11 +1,12 @@
 # HEADER/MENU
-maison : "Maison"
-à propos : "à propos"
-travaux : "travaux"
+maison : "Accueil"
+à propos : "Présentation"
+travaux : "Travaux"
 contact : "Contact"
 # FOOTER
 Mentions : "Mentions Légales"
 #INDEX
+accueil : "Bienvenue"
 creatWeb : "Créations Webs  &  Graphiques"
 webSite : "Sites  Internet  &  Infographies"
 #Works
@@ -41,3 +42,8 @@ mail : "Votre E-mail"
 tel : "Votre numéro de téléphone"
 sujet : "Le sujet de votre message"
 message : "Votre message"
+#Terms
+propri : "Le site lawebagency.net est la propriété d'Aurélien Latieule,  le siège est basé au 22 quater, rue du Barry, 11170 PEZENS.N° Siret : 853 910 446 00014"
+heber : "Le site internet est hébergé par"
+respons : "Responsable de la publication : Aurélien Latieule."
+mailterms : "Vous pouvez nous contacter par téléphone au 06 22 07 27 51 ou par email à"
